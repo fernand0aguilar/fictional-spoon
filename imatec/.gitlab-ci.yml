@@ -1,0 +1,141 @@
+before_script:
+  #variaveis do projeto
+  - if [ -z $CI_BUILD_TAG ]; then CI_BUILD_TAG='latest'; fi
+  - CI_PROJECT_NAME="imatec-light"
+  - CI_PROJECT_NAMESPACE="aeb"
+  - CI_PROJECT_PATH="$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME"
+  - IMAGE=$CI_PROJECT_PATH:$CI_BUILD_TAG
+
+  #variaveis do ambiente
+  - REGISTRY="newgit.aeb.gov.br:4567"
+  - AMBIENTE="desenvolvimento"
+  - DNS_DESENVOLVIMENTO="docker.aeb.gov.br"
+  - PORT="9013:9000"
+  - NODE_ENV="production"
+    #variaveis do ambiente-producao
+  #- USER_PRODUCAO=aebrh
+  #- DNS_PRODUCAO=192.168.0.95
+
+cache:
+  key: "node_modules"
+  paths:
+    - node_modules/
+
+stages:
+  - test
+  - merge
+  - build-project
+  - create-image
+  - deploy-desenvolvimento
+  - deploy-producao
+
+merge:
+  stage: merge
+  only:
+    - /^issue#.*$/
+  script:
+    - git branch -D master
+    - git fetch origin master:master
+    - git checkout master
+    - git merge --no-ff $CI_BUILD_REF
+    - git commit --amend -m "Merge branch $CI_BUILD_REF_NAME into master"
+    - git push origin master
+    - git push origin --delete $CI_BUILD_REF_NAME
+
+#nao há de fato etapa de teste, então tentar dar build para garantir
+test:
+  stage: test
+  only:
+    - /^issue#.*$/
+  script:
+    - cd app
+    - . ~/.nvm/nvm.sh
+    - npm install
+    - bower install
+    - gulp finalBuild
+
+build-project:
+  stage: build-project
+  only:
+    - master
+  script:
+    - cd app
+    - . ~/.nvm/nvm.sh
+    - npm install
+    - bower install
+    - gulp finalBuild
+  artifacts:
+    name: "$CI_PROJECT_NAME-$CI_BUILD_TAG"
+    paths:
+      - app/resources/dist/
+      - app/server/
+      - app/package.json
+  when: manual
+build-project-tags:
+  stage: build-project
+  only:
+    - tags
+  script:
+    - cd app
+    - . ~/.nvm/nvm.sh
+    - npm install
+    - bower install
+    - gulp finalBuild
+  artifacts:
+    name: "$CI_PROJECT_NAME-$CI_BUILD_TAG"
+    paths:
+      - app/resources/dist/
+      - app/server/
+      - app/package.json
+
+create-image:
+  stage: create-image
+  only:
+    - master
+    - tags
+  script:
+    - cd app
+    - . ~/.nvm/nvm.sh
+    - npm install
+    - bower install
+    - docker build . -t "$REGISTRY/$IMAGE"
+  dependencies:
+    - build-project
+    - build-project-tags
+
+deploy-desenvolvimento:
+  stage: deploy-desenvolvimento
+  only:
+    - master
+    - tags
+  script:
+    - cd app
+    - docker push $REGISTRY/$IMAGE
+    - rsh gitlab@$DNS_DESENVOLVIMENTO docker pull $REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:$CI_BUILD_TAG
+    - rsh gitlab@$DNS_DESENVOLVIMENTO docker stop $CI_PROJECT_NAME
+    - rsh gitlab@$DNS_DESENVOLVIMENTO docker rm $CI_PROJECT_NAME
+    - rsh gitlab@$DNS_DESENVOLVIMENTO docker run --name $CI_PROJECT_NAME --restart=always -d -p 0.0.0.0:$PORT -e NODE_ENV=$NODE_ENV $REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:$CI_BUILD_TAG
+  environment: desenvolvimento
+
+deploy-producao:
+  stage: deploy-producao
+  only:
+    - master
+    - tags
+  script:
+    - rsh $USER_PRODUCAO@$DNS_PRODUCAO mkdir -p /srv/$CI_PROJECT_NAME/releases || true
+    - rsh $USER_PRODUCAO@$DNS_PRODUCAO mkdir -p /srv/$CI_PROJECT_NAME/resources || true
+    - rsh $USER_PRODUCAO@$DNS_PRODUCAO rm -rf /srv/$CI_PROJECT_NAME/resources/dist || true
+    - rsh $USER_PRODUCAO@$DNS_PRODUCAO rm -rf /srv/$CI_PROJECT_NAME/server || true
+    - rsh $USER_PRODUCAO@$DNS_PRODUCAO rm -rf /srv/$CI_PROJECT_NAME/node_modules || true
+    - rsh $USER_PRODUCAO@$DNS_PRODUCAO rm /srv/$CI_PROJECT_NAME/package.json || true
+    - scp -r resources/dist/ $USER_PRODUCAO@$DNS_PRODUCAO:/srv/$CI_PROJECT_NAME/releases/$CI_PROJECT_NAME-$CI_BUILD_TAG/
+    - scp -r server/ $USER_PRODUCAO@$DNS_PRODUCAO:/srv/$CI_PROJECT_NAME/server/
+    - scp package.json $USER_PRODUCAO@$DNS_PRODUCAO:/srv/$CI_PROJECT_NAME/
+    - ssh $USER_PRODUCAO@$DNS_PRODUCAO "ln -s /srv/$CI_PROJECT_NAME/releases/$CI_PROJECT_NAME-$CI_BUILD_TAG/ /srv/$CI_PROJECT_NAME/resources/dist"
+    - rsh $USER_PRODUCAO@$DNS_PRODUCAO "source /home/aebrh/.nvm/nvm.sh && cd /srv/$CI_PROJECT_NAME/ && export NODE_ENV=$NODE_ENV && npm install && /home/aebrh/start_webapp.sh"
+  when: manual
+  dependencies:
+    - build-project
+    - build-project-tags
+  environment: producao

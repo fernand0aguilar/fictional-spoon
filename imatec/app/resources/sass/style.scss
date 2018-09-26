@@ -1,0 +1,26 @@
+/*        VARIABLES     */
+$background_color: #C0C0C0;
+$background_blue: rgb(40,53,147);
+
+
+/*        IMPORTS       */
+@import "default_page";
+@import "login";
+@import "home";
+@import "register";
+@import "products";
+
+/*       COMMOM SASS    */
+.imatec_main_container {
+  // background-image: url("/resources/img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  // background-position: center;
+  background: linear-gradient($background_color, #FFFFFF);
+  height: 100%;
+  width: 100%;
+}
+
+.aeb-logo{
+  width: 150px;
+}

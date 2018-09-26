@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="imatec">
+
+<head>
+    <meta charset="utf-8">
+    <title>IMATEC</title>
+
+    <!-- VENDOR DEPENDENCIES -->
+    <script src="resources/dist/vendor.js"></script>
+    <link rel="stylesheet" href="resources/dist/css/vendor.min.css">
+    <!-- VENDOR DEPENDENCIES -->
+
+    <!-- DEPENDENCES PRODUCTION -->
+    <!-- <script src="app.js"></script> -->
+    <script src="resources/dist/aeb.js"></script>
+    <link rel="stylesheet" href="resources/dist/css/style.min.css">
+    <!-- DEPENDENCIES PRODUCTION -->
+
+    <!--removeIf(production)-->
+    <!-- DEPENDENCIES DESENV -->
+    <!-- CONFIG -->
+    <script src="app.js" charset="utf-8"></script>
+
+    <script src="appConfig.js"></script>
+    <!-- CONFIG -->
+
+    <!-- COMMOM -->
+    <!-- CONTROLLERS -->
+    <script src="app/commom/controllers/mainCtrl.js"></script>
+    <script src="app/commom/controllers/homeCtrl.js"></script>
+    <script src="app/commom/controllers/loginCtrl.js"></script>
+    <script src="app/commom/controllers/registerCtrl.js"></script>
+    <!-- CONTROLLERS -->
+    <!-- SERVICES -->
+    <script src="app/commom/services/toastSrvc.js"></script>
+    <script src="app/commom/services/cryptoSrvc.js"></script>
+    <script src="app/commom/services/loginSrvc.js"></script>
+    <script src="app/commom/services/validateSrvc.js"></script>
+    <script src="app/commom/services/sessionSrvc.js"></script>
+    <script src="app/commom/services/registerSrvc.js"></script>
+    <!--SERVICES -->
+    <!-- FILTERS -->
+
+    <!-- FILTERS -->
+    <!-- DIRECTIVES -->
+
+    <!-- DIRECTIVES -->
+    <!-- COMMOM -->
+
+    <!-- DEPENDENCIES DESENV -->
+    <!--endRemoveIf(production)-->
+
+</head>
+
+<body>
+    <div class="imatec_main_container" ui-view>
+
+    </div>
+</body>
+
+</html>

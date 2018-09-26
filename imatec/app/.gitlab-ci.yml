@@ -1,0 +1,114 @@
+before_script:
+  #variaveis do projeto
+  - if [ -z $CI_BUILD_TAG ]; then CI_BUILD_TAG='latest'; fi
+  - CI_PROJECT_NAME="webapp"
+  - CI_PROJECT_NAMESPACE="aeb"
+  - CI_PROJECT_PATH="$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME"
+  - IMAGE=$CI_PROJECT_PATH:$CI_BUILD_TAG
+
+  #variaveis do ambiente
+  - REGISTRY="newgit.aeb.gov.br:4567"
+  - AMBIENTE="desenvolvimento"
+  - DNS_DESENVOLVIMENTO="docker.aeb.gov.br"
+  - PORT="9000:9000"
+  - NODE_ENV="production"
+
+cache:
+  key: "node_modules"
+  paths:
+    - node_modules/
+
+stages:
+  - test
+  - merge
+  - build-project
+  - create-image
+  - deploy-desenvolvimento
+  - deploy-producao
+
+merge:
+  stage: merge
+  only:
+    - /^issue#.*$/
+  script:
+    - git branch -D master
+    - git fetch origin master:master
+    - git checkout master
+    - git merge --no-ff $CI_BUILD_REF
+    - git commit --amend -m "Merge branch $CI_BUILD_REF_NAME into master"
+    - git push origin master
+    - git push origin --delete $CI_BUILD_REF_NAME
+
+#nao há de fato etapa de teste, então tentar dar build para garantir
+test:
+  stage: test
+  only:
+    - /^issue#.*$/
+  script:
+    - . ~/.nvm/nvm.sh
+    - npm install
+    - bower install
+    - gulp finalBuild
+
+build-project:
+  stage: build-project
+  only:
+    - master
+  script:
+    - . ~/.nvm/nvm.sh
+    - npm install
+    - bower install
+    - gulp finalBuild
+  artifacts:
+    name: "$CI_PROJECT_NAME-$CI_BUILD_TAG"
+    paths:
+      - resources/dist/
+  when: manual
+
+build-project-tags:
+  stage: build-project
+  only:
+    - tags
+  script:
+    - . ~/.nvm/nvm.sh
+    - npm install
+    - bower install
+    - gulp finalBuild
+  artifacts:
+    name: "$CI_PROJECT_NAME-$CI_BUILD_TAG"
+    paths:
+      - resources/dist/
+
+create-image:
+  stage: create-image
+  only:
+    - master
+    - tags
+  script:
+    - docker build . -t "$REGISTRY/$IMAGE"
+  dependencies:
+    - build-project
+    - build-project-tags
+
+deploy-desenvolvimento:
+  stage: deploy-desenvolvimento
+  only:
+    - master
+    - tags
+  script:
+    - docker push $REGISTRY/$IMAGE
+    - rsh gitlab@$DNS_DESENVOLVIMENTO docker pull $REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:$CI_BUILD_TAG
+    - rsh gitlab@$DNS_DESENVOLVIMENTO docker stop $CI_PROJECT_NAME
+    - rsh gitlab@$DNS_DESENVOLVIMENTO docker rm $CI_PROJECT_NAME
+    - rsh gitlab@$DNS_DESENVOLVIMENTO docker run --name $CI_PROJECT_NAME --restart=always -d -p 0.0.0.0:$PORT -e NODE_ENV=$NODE_ENV $REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:$CI_BUILD_TAG
+  environment: desenvolvimento
+
+deploy-producao:
+  stage: deploy-producao
+  only:
+    - master
+    - tags
+  script:
+    - echo "Esperando a infra instalar o ambiente de producao.. Cade infra?"
+  when: manual
+  environment: producao

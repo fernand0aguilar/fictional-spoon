@@ -1,0 +1,35 @@
+<div layout="column" flex layout-fill ng-cloak>
+    <!-- <md-toolbar class="md-hue-2" md-scroll-shrink>
+        <div class="md-toolbar-tools" id="aeb" layout="row" layout-align="start center"><h2>IMATEC</h2>
+        </div>
+        <div class="md-toolbar-tools">
+          <h3>Sair</h3>
+        </div>
+    </md-toolbar> -->
+    <md-toolbar class="md-hue-2">
+      <div class="md-toolbar-tools imatec_toolbar">
+        <h2 flex="" md-truncate="">IMATEC</h2>
+
+        <md-button class="md-icon-button" aria-label="Logout">
+          <md-icon ng-click="logout()">X</md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <div layout="row" layout-align="center center" class="login_page">
+        <md-card class="product_card_container">
+            <md-card-header layout="row" layout-align="center start">
+                <h1>Produtos</h1>
+            </md-card-header>
+            <md-card-content>
+                <div class="row">
+                    <div layout-align="center start">
+                        <span>Upload</span>
+                        <input id="fileInput" name="file" type="file" class="ng-hide" multiple>
+                        <md-button id="uploadButton" class="md-raised md-primary" layout-align="left"> Procurar... </md-button>
+                    </div>
+                </div>
+            </md-card-content>
+        </md-card>
+    </div>
+</div>
