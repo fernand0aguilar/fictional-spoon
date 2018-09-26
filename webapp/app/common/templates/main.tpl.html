@@ -1,0 +1,27 @@
+<div layout="row" class="header" layout-wrap>
+  <div class="header_logo_div" layout-align="start center">
+    <img ui-sref="main.home" src="resources/img/logo-aeb.png"/>
+    <img src="resources/img/beta_orig.png" class="beta_img" style="position: absolute; height:5%;"/>
+  </div>
+  <div layout="column" class="header_username_register" layout-align="end end" flex>
+    <div flex class="header_user_info_div" layout-align="end start">
+      <p>
+        {{employee.name}}
+      </p>
+    </div>
+
+    <div layout-align="end end" flex class="header_menu" layout="row">
+      <a ui-sref="main.home" ui-sref-active="active_button" flex-offset=5 >Página Inicial</a>
+      <a ui-sref="main.reports" ui-sref-active="active_button" ng-if="isUserAdmin() || isUserRoot()">Relatórios</a>
+      <a ui-sref="main.registerUser({userId: 0})" flex-offset=5 ui-sref-active="active_button" ng-if="isUserAdmin() || isUserRoot()" id="register_user_lnk">Cadastrar Funcionario</a>
+      <a ui-sref="main.registerLocal" flex-offset=5 ui-sref-active="active_button" ng-if="isUserAdmin() || isUserRoot()" id="register_local_lnk">Cadastrar Localidade</a>
+      <a ui-sref="main.listUsers" id="edit_user_lnk" flex-offset=5 ui-sref-active="active_button" ng-if="isUserAdmin() || isUserRoot()">Editar Funcionario</a>
+      <md-button class="md-no-focus" ng-click="logoutUser()" flex-offset=5> <md-icon ng-bind="'input'" class="icon_user_signout"></md-icon></md-button>
+
+    </div>
+  </div>
+</div>
+
+<div ui-view>
+
+</div>

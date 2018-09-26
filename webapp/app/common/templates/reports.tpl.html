@@ -1,0 +1,21 @@
+<div layout="row">
+  <md-card flex="90" flex-offset="5">
+    <md-card-content>
+      <h1>Relatórios</h1>
+
+      <h3>Pessoal</h3>
+      <div layout="row">
+        <a flex="15" class="reports_menu" href="{{getUrlOfReport('perRole')}}" target="_blank">
+            Pessoas por Cargo
+        </a>
+        <a flex="15" class="reports_menu" href="{{getUrlOfReport('perCategory')}}" flex-offset="5" target="_blank">
+            Pessoas por Categoria
+        </a>
+        <a flex="15" class="reports_menu" href="{{getUrlOfReport('perVacations')}}"
+        flex-offset="5" target="_blank" ng-show="{{isUserBoss()}}">
+            Férias dos Funcionários
+        </a>
+      </div>
+    </md-card-content>
+  </md-card>
+</div>

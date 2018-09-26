@@ -1,0 +1,455 @@
+<form class="update_user_form">
+    <md-card flex="100">
+        <md-card-content flex>
+            <h2 class="md-display-1 title_user_register">Funcionário</h2>
+            <div layout="row">
+                <md-input-container flex="50">
+                    <label>*Nome</label>
+                    <input id="register_user_input_name" type="text" ng-model="$ctrl.user.name" required ng-blur="calculateNetworkName()">
+                </md-input-container>
+
+                <md-input-container flex="45" flex-offset=5>
+                    <label>*Matrícula</label>
+                    <input id="register_user_input_registry" only-number ng-model="$ctrl.user.registerNumber" required>
+                </md-input-container>
+            </div>
+
+            <div layout="row">
+                <md-input-container flex="50">
+                    <label>*Email</label>
+                    <input id="register_user_input_email" type="text" ng-model="$ctrl.user.aebMail" required>
+                </md-input-container>
+                <md-input-container flex="45" flex-offset=5>
+                    <label>*Login Rede</label>
+                    <input id="register_user_input_network_login" type="text" ng-model="$ctrl.user.networkLogin" required>
+                </md-input-container>
+            </div>
+
+            <div layout="row">
+                <md-input-container flex="50">
+                    <label>Ramal</label>
+                    <input ng-model="$ctrl.user.insideCompanyPhone.number" only-number>
+                </md-input-container>
+
+                <md-input-container flex-offset="15" layout-align="start center">
+                    <label>*Admissão</label>
+                    <md-datepicker id="register_user_input_entry_date" ng-model="$ctrl.user.entryDate"></md-datepicker>
+                </md-input-container>
+            </div>
+
+            <div layout="row" layout-align="start center">
+                <md-input-container flex="50">
+                    <label>*Categoria funcionário</label>
+                    <md-select ng-change="categoryChanged()" id="register_user_input_category" ng-model="$ctrl.user.employeeCategory" ng-model-options="{trackBy: '$value.id'}" required>
+                        <md-option ng-value="category" ng-repeat="category in $ctrl.categories">{{category.category}}</md-option>
+                    </md-select>
+                </md-input-container>
+                <md-input-container flex="45" flex-offset="5">
+                    <label>*Cargo funcionário</label>
+                    <md-select id="register_user_input_role" ng-model="$ctrl.user.employeeRole" ng-model-options="{trackBy: '$value.id'}" required>
+                        <md-option ng-value="role" ng-repeat="role in $ctrl.roles">{{role.description}}</md-option>
+                    </md-select>
+                </md-input-container>
+
+            </div>
+
+            <div layout="row" layout-align="start center">
+                <md-input-container flex="50">
+                    <label>*Diretoria</label>
+                    <md-select id="register_user_input_directory" ng-model="$ctrl.user.directory" ng-change="directoryChanged()" ng-model-options="{trackBy: '$value.id'}" required>
+                        <md-option ng-value="directory" ng-repeat="directory in $ctrl.directories">{{directory.achronym}}</md-option>
+                    </md-select>
+                </md-input-container>
+                <md-input-container flex="45" flex-offset="5">
+                    <label>Coordenação</label>
+                    <md-select id="register_user_input_coordination" ng-model="$ctrl.user.coordination" ng-change="coordinationChanged()" ng-model-options="{trackBy: '$value.id'}">
+                        <md-option ng-value="coordination" ng-repeat="coordination in $ctrl.coordinations">{{coordination.achronym}}</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+            <div layout="row" layout-align="start center">
+                <md-input-container flex="50">
+                    <label>Divisão</label>
+                    <md-select id="register_user_input_divison" ng-model="$ctrl.user.division" ng-model-options="{trackBy: '$value.id'}">
+                        <md-option ng-value="division" ng-repeat="division in $ctrl.divisions">{{division.achronym}}</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+            <div ng-if="isOutsourced">
+                <div layout="row" layout-align="start center">
+                    <md-input-container flex="50">
+                        <label>*CLT</label>
+                        <input id="register_user_input_clt" type="text" ng-model="$ctrl.user.outsideEmployee.clt" required>
+                    </md-input-container>
+
+                    <md-input-container flex="45" flex-offset="5">
+                        <label>*Emissor CLT</label>
+                        <input id="register_user_input_clt_company" type="text" ng-model="$ctrl.user.outsideEmployee.cltCompany" required>
+                    </md-input-container>
+                </div>
+                <div layout="row" layout-align="start center">
+                    <md-input-container flex="40" flex-offset="10">
+                        <label>*Emissão CLT:</label>
+                        <md-datepicker id="register_user_input_clt_expedition_date" ng-model="$ctrl.user.outsideEmployee.cltExpedition" flex="20"></md-datepicker>
+                    </md-input-container>
+
+                    <md-input-container flex-offset="5" flex="45">
+                        <label>*UF</label>
+                        <md-select id="register_user_input_outsourced_uf" ng-model="$ctrl.user.outsideEmployee.uf" ng-model-options="{trackBy: '$value.id'}" required>
+                            <md-option ng-value="uf" ng-repeat="uf in $ctrl.ufs">{{uf.achronym}}</md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+                <div layout="row">
+                    <md-input-container flex="50">
+                        <label>*Empresa</label>
+                        <md-select id="register_user_input_outsourced_company" ng-model="$ctrl.user.outsideEmployee.company" ng-model-options="{trackBy: '$value.id'}" required>
+                            <md-option ng-value="company" ng-repeat="company in $ctrl.companies">{{company.name}}</md-option>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container flex-offset="15" flex="35">
+                        <label>*Admissão:</label>
+                        <md-datepicker id="register_user_input_outsorced_entry_date" ng-model="$ctrl.user.outsideEmployee.entryDate" flex="20"></md-datepicker>
+                    </md-input-container>
+                </div>
+            </div>
+
+            <div ng-if="isPublicServer">
+                <div layout="row">
+                    <md-input-container flex="50">
+                        <label>*Orgão</label>
+                        <md-select id="register_user_input_public_company" ng-model="$ctrl.user.publicEmployee.publicCompany" ng-model-options="{trackBy: '$value.id'}" required>
+                            <md-option ng-value="publicCompany" ng-repeat="publicCompany in $ctrl.publicCompanies">{{publicCompany.achronym}}</md-option>
+                        </md-select>
+                    </md-input-container>
+
+                    <md-input-container flex="45" flex-offset="5">
+                        <label>*Aposentado</label>
+                        <md-select id="register_user_input_retired" ng-model="$ctrl.user.publicEmployee.retired" required>
+                            <md-option ng-value="false">Não</md-option>
+                            <md-option ng-value="true">Sim</md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+
+                <div layout="row" layout-align="start center">
+                    <md-input-container flex-offset="10" flex="40">
+                        <span>
+                                <label>Ingresso no serviço publico:</span>
+                        <md-datepicker id="register_user_input_income_date" ng-model="$ctrl.user.publicEmployee.incomeDate" ng-required></md-datepicker>
+                    </md-input-container>
+
+                    <md-input-container flex-offset="15">
+                        <label>Nomeação:</label>
+                        <md-datepicker id="register_user_input_nomination_date" ng-model="$ctrl.user.publicEmployee.nominationDate" ></md-datepicker>
+                    </md-container-input>
+                </div>
+                <div layout="row" layout-align="start center">
+                    <md-input-container>
+                        <label>*Publicação no DOU:</span>
+                        <md-datepicker id="register_user_input_publication_date" ng-model="$ctrl.user.publicEmployee.publicationDate"></md-datepicker>
+                    </md-input-container>
+                </div>
+                <div layout="row" layout-align="start center">
+                    <md-input-container flex="20">
+                        <label>*Diretoria de origem</label>
+                        <md-select ng-model="$ctrl.user.publicEmployee.directoryFrom" ng-change="directoryFromChanged()" ng-model-options="{trackBy: '$value.id'}">
+                            <md-option ng-value="directory" ng-repeat="directory in $ctrl.directories">{{directory.achronym}}</md-option>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container flex-offset="10" flex="20">
+                        <label>Coordenação de origem</label>
+                        <md-select ng-model="$ctrl.user.publicEmployee.coordinationFrom" ng-change="coordinationFromChanged()" ng-model-options="{trackBy: '$value.id'}">
+                            <md-option ng-value="coordination" ng-repeat="coordination in $ctrl.coordinations">{{coordination.achronym}}</md-option>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container flex-offset="5">
+                        <label>Divisão de origem</label>
+                        <md-select ng-model="$ctrl.user.publicEmployee.divisionFrom" ng-model-options="{trackBy: '$value.id'}">
+                            <md-option ng-value="division" ng-repeat="division in $ctrl.divisions">{{division.achronym}}</md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+            </div>
+        </md-card-content>
+    </md-card>
+    <md-card flex="100">
+        <md-card-content flex>
+
+            <h2 class="md-display-1 title_user_register">Dados</h2>
+            <div layout="row" layout-align="start center">
+                <md-input-container flex="50">
+                    <label>*Registro Civil (RG)</label>
+                    <input id="register_user_input_rg" type="text" ng-model="$ctrl.user.rg.rg" required>
+                </md-input-container>
+
+                <md-input-container flex="45" flex-offset="5">
+                    <label>*Emissor</label>
+                    <input id="register_user_input_rg_issuing_company" type="text" ng-model="$ctrl.user.rg.issuingCompany" required>
+                </md-input-container>
+            </div>
+
+            <div layout="row" layout-align="start center">
+                <md-input-container flex="50">
+                    <label>*UF</label>
+                    <md-select id="register_user_input_rg_issuing_uf" ng-model="$ctrl.user.rg.uf" ng-model-options="{trackBy: '$value.id'}">
+                        <md-option ng-value="uf" ng-repeat="uf in $ctrl.ufs">{{uf.achronym}}</md-option>
+                    </md-select>
+                </md-input-container>
+
+                <md-input-container flex-offset="15" flex="35">
+                    <label>*Emissão:</label>
+                    <md-datepicker id="register_user_input_rg_issuing_date" ng-model="$ctrl.user.rg.expeditionDate" flex="20"></md-datepicker>
+                </md-input-container>
+            </div>
+
+            <div layout="row">
+                <md-input-container flex-offset="10" flex="40">
+                    <label>*Data de nascimento:</label>
+                    <md-datepicker id="register_user_input_birth_date" flex="40" ng-model="$ctrl.user.birthDate"></md-datepicker>
+                </md-input-container>
+
+                <md-input-container flex="45" flex-offset="5">
+                    <label>*UF de Nascimento</label>
+                    <md-select id="register_user_input_birth_district" ng-model="$ctrl.user.birthDistrict" ng-model-options="{trackBy: '$value.id'}" ng-required="true">
+                        <md-option ng-value="uf" ng-repeat="uf in $ctrl.ufs">{{uf.achronym}}</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+            <div layout="row" layout-align="start center">
+                <md-input-container flex="50">
+                    <label>*CPF</label>
+                    <input id="register_user_input_rg_issuing_cpf" type="text" ng-model="$ctrl.user.cpf" required>
+                </md-input-container>
+
+                <md-input-container flex-offset="5" flex="45">
+                    <label>*Sexo</label>
+                    <md-select id="register_user_input_sex" ng-model="$ctrl.user.sex" required>
+                        <md-option ng-value="true">Masculino</md-option>
+                        <md-option ng-value="false">Feminino</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+            <div layout="row" layout-align="start center">
+                <md-input-container flex="50">
+                    <label>*Tipo sanguíneo</label>
+                    <md-select id="register_user_input_blood_type" ng-model="$ctrl.user.bloodType" required>
+                        <md-option ng-value="'O+'">O+</md-option>
+                        <md-option ng-value="'O-'">O-</md-option>
+                        <md-option ng-value="'A+'">A+</md-option>
+                        <md-option ng-value="'A-'">A-</md-option>
+                        <md-option ng-value="'B+'">B+</md-option>
+                        <md-option ng-value="'B-'">B-</md-option>
+                        <md-option ng-value="'AB+'">AB+</md-option>
+                        <md-option ng-value="'AB-'">AB-</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+            <div layout="row" ng-if="showMilitaryDocument()">
+                <md-input-container flex="50">
+                    <label>*Documento Militar</label>
+                    <input id="register_user_input_military_document" number ng-model="$ctrl.user.militaryDocument.number" required>
+                </md-input-container>
+
+                <md-input-container flex="45" flex-offset="5">
+                    <label>*Série</label>
+                    <input id="register_user_input_military_series" type="text" ng-model="$ctrl.user.militaryDocument.series" required>
+                </md-input-container>
+            </div>
+
+            <div layout="row" ng-if="showMilitaryDocument()">
+                <md-input-container flex="50" flex-offset="0">
+                    <label>*Categoria</label>
+                    <input id="register_user_input_military_category" type="text" ng-model="$ctrl.user.militaryDocument.category">
+                </md-input-container>
+
+                <md-input-container flex="45" flex-offset="5">
+                    <label>*UF</label>
+                    <md-select id="register_user_input_military_uf" ng-model="$ctrl.user.militaryDocument.uf" ng-model-options="{trackBy: '$value.id'}">
+                        <md-option ng-value="uf" ng-repeat="uf in $ctrl.ufs">{{uf.achronym}}</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+            <div layout="row">
+                <md-input-container flex="50">
+                    <label>Titulo eleitoral</label>
+                    <input id="register_user_input_election_document" type="text" ng-model="$ctrl.user.electionDocument.title">
+                </md-input-container>
+
+                <md-input-container flex="45" flex-offset="5">
+                    <label>Zona</label>
+                    <input id="register_user_input_election_document_zone" type="text" ng-model="$ctrl.user.electionDocument.zone">
+                </md-input-container>
+            </div>
+
+            <div layout="row">
+                <md-input-container flex="50">
+                    <label>Seção</label>
+                    <input id="register_user_input_election_document_section" type="text" ng-model="$ctrl.user.electionDocument.section">
+                </md-input-container>
+
+                <md-input-container flex="45" flex-offset="5">
+                    <label>UF</label>
+                    <md-select id="register_user_input_military_document_uf" ng-model="$ctrl.user.electionDocument.uf" ng-model-options="{trackBy: '$value.id'}">
+                        <md-option ng-value="uf" ng-repeat="uf in $ctrl.ufs">{{uf.achronym}}</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+            <div layout="row" layout-align="start center">
+                <md-input-container flex="50">
+                    <label>Pis/Pasep</label>
+                    <input id="register_user_input_pis" type="text" ng-model="$ctrl.user.laborData.pisPasep" only-number>
+                </md-input-container>
+
+                <md-input-container flex="35" flex-offset="15">
+                    <label>Primeiro emprego:</label>
+                    <md-datepicker id="register_user_input_first_job_date" ng-model="$ctrl.user.laborData.firstJob" flex="45" md-hide-icons="true">
+                    </md-datepicker>
+                </md-input-container>
+            </div>
+        </md-card-content>
+    </md-card>
+    <md-card flex="100">
+        <md-card-content flex>
+            <h2 class="md-display-1 title_user_register">Informações pessoais</h2>
+            <div layout="row">
+                <md-input-container flex="50">
+                    <label>*Nome Mãe</label>
+                    <input id="register_user_input_mother_name" type="text" ng-model="$ctrl.user.filiation.motherName" required>
+                </md-input-container>
+                <md-input-container flex="45" flex-offset="5">
+                    <label>Nome Pai</label>
+                    <input type="text" ng-model="$ctrl.user.filiation.fatherName">
+                </md-input-container>
+            </div>
+
+            <div layout="row">
+                <md-input-container flex="50">
+                    <label>Cor/Origem étnica</label>
+                    <md-select id="register_user_input_color" ng-model="$ctrl.user.skinColor" ng-model-options="{trackBy: '$value.id'}">
+                        <md-option ng-value="skinColor" ng-repeat="skinColor in $ctrl.skinColors">{{skinColor.name}}</md-option>
+                    </md-select>
+                </md-input-container>
+
+                <md-input-container flex="45" flex-offset="5">
+                    <label>*Naturalidade</label>
+                    <input id="register_user_input_place_of_birth" type="text" ng-model="$ctrl.user.placeOfBirth" required>
+                </md-input-container>
+            </div>
+
+            <div layout="row">
+                <md-input-container flex="50">
+                    <label>*Endereço</label>
+                    <input type="text" id="register_user_input_address" ng-model="$ctrl.user.address.address" required>
+                </md-input-container>
+
+                <md-input-container flex="45" flex-offset="5">
+                    <label>*Cep</label>
+                    <input id="register_user_input_zip_code" type="text" ng-model="$ctrl.user.address.zipcode" required>
+                </md-input-container>
+            </div>
+
+            <div layout="row">
+                <md-input-container flex="50">
+                    <label>Complemento</label>
+                    <input id="register_user_input_complement" type="text" ng-model="$ctrl.user.address.complement">
+                </md-input-container>
+
+                <md-input-container flex="45" flex-offset="5">
+                    <label>Número</label>
+                    <input id="register_user_input_number" type="text" ng-model="$ctrl.user.address.number">
+                </md-input-container>
+            </div>
+
+            <div layout="row">
+                <md-input-container flex="50">
+                    <label>Bairro</label>
+                    <input id="register_user_input_neighborhood" type="text" ng-model="$ctrl.user.address.neighborhood">
+                </md-input-container>
+                <md-input-container flex="45" flex-offset="5">
+                    <label>UF</label>
+                    <md-select id="register_user_input_address_uf" ng-model="addressUf" ng-change="addressUfChanged()" ng-model-options="{trackBy: '$value.id'}">
+                        <md-option ng-value="uf" ng-repeat="uf in $ctrl.ufs">{{uf.achronym}}</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+            <div layout="row">
+                <md-input-container flex-offset="0" flex="50">
+                    <label>Cidade</label>
+                    <md-select id="register_user_input_address_city" ng-model="$ctrl.user.address.city" ng-model-options="{trackBy: '$value.id'}">
+                        <md-option ng-value="city" ng-repeat="city in $ctrl.cities">{{city.name}}</md-option>
+                    </md-select>
+                </md-input-container>
+                <md-input-container flex="45" flex-offset="5">
+                    <label>Estado civil</label>
+                    <md-select id="register_user_input_civil_status" ng-model="$ctrl.user.maritalStatus" ng-model-options="{trackBy: '$value.id'}">
+                        <md-option ng-value="maritalStatus" ng-repeat="maritalStatus in $ctrl.maritalStatuses">{{maritalStatus.status}}</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+            <div layout="row" layout-align="start center" ng-if="user.maritalStatus.status == 'Casado'">
+                <md-input-container flex="50">
+                    <label>Cônjuge</label>
+                    <input id="regsiter_user_input_spouse_name" type="text" ng-model="$ctrl.user.spouse.name">
+                </md-input-container>
+
+                <md-input-container flex-offset="15" flex="35">
+                    <label>Data de nascimento: </label>
+                    <md-datepicker id="register_user_input_spouse_birth_date" ng-model="$ctrl.user.spouse.birthDate"></md-datepicker>
+                </md-input-container>
+            </div>
+        </md-card-content>
+    </md-card>
+    <md-card flex="100">
+        <md-card-content flex layout="column">
+
+            <h2 class="md-display-1 title_user_register">Emergência</h2>
+            <div layout="row">
+                <md-input-container flex="50">
+                    <label>Nome contato de emergência</label>
+                    <input type="text" ng-model="$ctrl.user.emergencyContact.name">
+                </md-input-container>
+                <md-input-container flex="15" flex-offset="5">
+                    <label>DDD</label>
+                    <input type="text" ng-model="$ctrl.user.emergencyContact.phone.ddd">
+                </md-input-container>
+                <md-input-container flex="25" flex-offset="5">
+                    <label>Telefone</label>
+                    <input type="text" ng-model="$ctrl.user.emergencyContact.phone.number">
+                </md-input-container>
+            </div>
+
+            <div layout="row">
+                <md-input-container flex="50">
+                    <label>Plano de saúde</label>
+                    <md-select ng-model="$ctrl.user.healthInsurance.healthInsuranceCompany">
+                        <md-option ng-value="healthInsuranceCompany" ng-repeat="healthInsuranceCompany in $ctrl.healthInsuranceCompanies" ng-selected="$ctrl.isSelectedHealthInsuranceCompany(healthInsuranceCompany)">{{healthInsuranceCompany.name}}</md-option>
+                    </md-select>
+
+                </md-input-container>
+                <md-input-container flex="45" flex-offset="5">
+                    <label>Número plano</label>
+                    <input type="text" ng-model="$ctrl.user.healthInsurance.number">
+                </md-input-container>
+            </div>
+
+            <div layout="row">
+                <md-input-container flex="40" flex-offset="10">
+                    <label>Validade: </label>
+                    <md-datepicker ng-model="$ctrl.user.healthInsurance.expirationDate"></md-datepicker>
+                </md-input-container>
+            </div>
+            <div layout="row">
+                <md-button id="register_user_send_btn" class="md-raised user_register_button" type="submit" ng-click="$ctrl.updateUser()">Cadastrar</md-button>
+            </div>
+        </md-card-content>
+    </md-card>
+</form>

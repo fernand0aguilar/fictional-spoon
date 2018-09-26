@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html ng-app="pinoquio">
+
+<head>
+    <meta charset="utf-8">
+    <title>SisRH</title>
+
+    <!-- VENDOR DEPENDENCIES -->
+    <script src="resources/dist/angular.js"></script>
+    <script src="resources/dist/angular-ui-router.min.js"></script>
+    <script src="resources/dist/angular-animate.min.js"></script>
+    <script src="resources/dist/angular-aria.min.js"></script>
+    <script src="resources/dist/angular-material.min.js"></script>
+    <script src="resources/dist/jquery.min.js"></script>
+    <script src="resources/dist/angular-material-icons.min.js"></script>
+    <script src="resources/dist/moment.min.js"></script>
+    <script src="resources/dist/angular-moment.min.js"></script>
+    <script src="resources/dist/pt-br.js"></script>
+    <!-- <script src="resources/dist/jquery-ui.min.js"></script> -->
+    <!-- <script src="resources/dist/aes.js"></script> -->
+    <!-- <script src="resources/dist/sha256.js"></script> -->
+    <!-- <script src="resources/dist/angular-validation-match.min.js"></script> -->
+    <script src="resources/dist/angular-local-storage.min.js"></script>
+    <!-- <script src="resources/dist/Chart.min.js"></script> -->
+    <!-- <script src="resources/dist/fingerprint2.min.js"></script> -->
+    <!-- <script src="resources/dist/angular-chart.min.js"></script> -->
+    <!-- <script src="resources/dist/angular-dropzone.js"></script> -->
+    <!-- <script src="resources/dist/uploader.min.js"></script> -->
+    <script src="resources/dist/sweetalert.min.js"></script>
+    <script src="resources/dist/SweetAlert.min.js"></script>
+    <link rel="stylesheet" href="resources/dist/css/vendor.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- VENDOR DEPENDENCIES -->
+
+    <!-- PINOQUIO DEPENDENCES PRODUCTION -->
+    <script src="app.js"></script>
+
+    <!-- CONFIG -->
+    <script src="app/config/config.js"></script>
+    <!-- CONFIG -->
+
+    <script src="resources/dist/app.min.js"></script>
+    <script src="resources/dist/aeb.js"></script>
+    <link rel="stylesheet" href="resources/dist/css/style.min.css">
+    <!-- PINOQUIO DEPENDENCIES PRODUCTION -->
+
+    <!--removeIf(production)-->
+    <!-- PINOQUIO DEPENDENCIES DESENV -->
+    <!-- COMPONENTS -->
+    <script src="components/connector/httpConnector.js"></script>
+    <script src="components/time.js"></script>
+    <!-- COMPONENTS -->
+
+    <!-- COMMOM -->
+    <!-- CONTROLLERS -->
+    <script src="app/common/controllers/homeCtrl.js"></script>
+    <script src="app/common/controllers/loginCtrl.js"></script>
+    <script src="app/common/controllers/mainCtrl.js"></script>
+    <!-- CONTROLLERS -->
+    <!-- SERVICES -->
+    <script src="app/common/services/loginSrvc.js"></script>
+    <script src="app/common/services/authorizationSrvc.js"></script>
+    <script src="app/common/services/storageSrvc.js"></script>
+    <script src="app/common/services/maritalStatusSrvc.js"></script>
+    <script src="app/common/services/skinColorSrvc.js"></script>
+    <script src="app/common/services/ufSrvc.js"></script>
+    <script src="app/common/services/citySrvc.js"></script>
+    <script src="app/common/services/directorySrvc.js"></script>
+    <script src="app/common/services/coordinationSrvc.js"></script>
+    <script src="app/common/services/divisionSrvc.js"></script>
+    <script src="app/common/services/categorySrvc.js"></script>
+    <script src="app/common/services/roleSrvc.js"></script>
+    <script src="app/common/services/educationLevelSrvc.js"></script>
+    <script src="app/common/services/educationalBackgroundSrvc.js"></script>
+    <script src="app/common/services/employeeSrvc.js"></script>
+    <script src="app/common/services/hobbieSrvc.js"></script>
+    <script src="app/common/services/errorSrvc.js"></script>
+    <script src="app/common/services/relativeSrvc.js"></script>
+    <script src="app/common/services/healthInsuranceCompanySrvc.js"></script>
+    <script src="app/common/services/buildingSrvc.js"></script>
+    <!--SERVICES -->
+    <!-- FILTERS -->
+    <!-- FILTERS -->
+    <!-- DIRECTIVES -->
+    <!-- DIRECTIVES -->
+    <!-- COMMOM -->
+    <!-- CONTROLLERS -->
+    <!-- CONTROLLERS -->
+    <!-- ROOT -->
+
+    <!-- ADMIN -->
+    <!-- CONTROLLERS -->
+    <script src="app/admin/controllers/registerUserCtrl.js"></script>
+    <script src="app/admin/controllers/updateUserCtrl.js"></script>
+    <script src="app/admin/controllers/listUserCtrl.js"></script>
+    <script src="app/admin/controllers/toast/invalidFieldsCtrl.js"></script>
+    <script src="app/admin/controllers/dialog/insideCompanyPhoneCtrl.js"></script>
+    <script src="app/admin/controllers/dialog/removeUserCtrl.js"></script>
+    <script src="app/admin/controllers/dialog/registerLeaveCtrl.js"></script>
+    <script src="app/admin/controllers/registerLocalCtrl.js"></script>
+
+    <!-- REPORTS -->
+    <script src="app/admin/controllers/reportsCtrl.js"></script>
+    <!-- REPORTS -->
+    <!-- CONTROLLERS -->
+
+    <!-- SERVICES -->
+    <script src="app/admin/services/registerSrvc.js"></script>
+    <script src="app/admin/services/listSrvc.js"></script>
+    <script src="app/admin/services/leaveSrvc.js"></script>
+    <script src="app/admin/services/companySrvc.js"></script>
+    <script src="app/admin/services/publicCompanySrvc.js"></script>
+    <script src="app/admin/services/phoneSrvc.js"></script>
+    <!-- SERVICES -->
+
+    <!--  COMPONENTS -->
+    <script src="app/admin/components/updateUserCard.component.js"></script>
+    <script src="app/admin/components/updateUserFormationCard.component.js"></script>
+    <script src="app/admin/components/updateUserRelativesCard.component.js"></script>
+    <script src="app/admin/components/updateUserHobbiesCard.component.js"></script>
+    <script src="app/admin/components/userDataCard.component.js"></script>
+    <!--  COMPONENTS -->
+    <!-- ADMIN -->
+
+    <!-- PINOQUIO DEPENDENCIES DESENV -->
+    <!--endRemoveIf(production)-->
+
+</head>
+
+<body>
+    <div ui-view class="main_div">
+
+    </div>
+</body>
+
+</html>

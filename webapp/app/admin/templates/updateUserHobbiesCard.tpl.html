@@ -1,0 +1,24 @@
+<md-card flex layout="column" class="user_content_div hobbies_card">
+    <md-card-content layout="column" flex="95" class="user_info" layout="column">
+        <h2 class="md-display-1 title_user_register">HABILIDADES</h2>
+        <form>
+            <div layout="row">
+                <md-input-container flex="75">
+                    <label>Habilidade ou Hobbie</label>
+                    <input id="home_input_hobbie_name" type="text" ng-model="$ctrl.hobbie.description" maxlength="250" required>
+                </md-input-container>
+                <md-button id="home_input_hobbie_btn" class="md-raised" flex-offset="5" ng-click='$ctrl.registerHobbie()'>Adicionar</md-button>
+            </div>
+        </form>
+        <div class="hobbies_table">
+            <div ng-repeat="hobbie in $ctrl.listOfHobbies" layout-align="start center" layout="row">
+                <span flex="80">{{hobbie.description}}</span>
+                <span layout="row" flex>
+                    <md-button id="{{$ctrl.listOfHobbies.indexOf(hobbie.description) + 2}}" ng-click="$ctrl.deleteHobbie(hobbie.id)">
+                        <md-icon ng-bind="'delete_forever'" style="fill: #666;"></md-icon>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </md-card-content>
+</md-card>

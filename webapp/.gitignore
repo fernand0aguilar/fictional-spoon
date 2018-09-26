@@ -1,0 +1,8 @@
+bower_components/
+node_modules/
+/resources/dist
+.idea
+screenshots/
+/config.json
+/app/config/config.js
+/.env

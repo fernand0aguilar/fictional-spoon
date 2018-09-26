@@ -1,0 +1,3 @@
+{
+  "predef": ["angular", "console", "swal", "RelativeSrvc", "document"]
+}

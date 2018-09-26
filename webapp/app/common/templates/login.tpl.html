@@ -1,0 +1,31 @@
+<div class="login_page">
+  <div class="login_outter_div" layout="column" layout-align="center">
+    <div class="login_info" layout-align="center">
+      <div flex class="login_system_name" layout="row" layout-align="center center" class="login_info_header">
+        <h1>SisRH</h1>
+      </div>
+      <div flex class="login_form_div" layout="row" layout-align="center center">
+        <form ng-action="loginUser()">
+          <md-input-container>
+            <label>Login</label>
+            <input id="login_username" type="text" ng-model="login.username">
+          </md-input-container>
+
+          <md-input-container>
+            <label>Senha</label>
+            <input id="login_password" type="password" ng-model="login.password">
+          </md-input-container>
+          <div layout="row" layout-align="center center">
+            <md-button class="login_button" id="login_button" ng-click="loginUser()" class="md-raised primary_btn" aria-label="Custom Icon Button">
+              Entrar
+            </md-button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="login_header">
+    <img src="resources/img/logo-aeb.png" />
+  </div>
+</div>

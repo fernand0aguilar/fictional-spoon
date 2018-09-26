@@ -1,0 +1,15 @@
+<md-dialog class="invalid_field_dialog">
+  <md-dialog-content>
+    <div>
+      <h1 class="md-headline">Campos inválidos:</h1>
+      <ul>
+        <li ng-repeat="message in messages">{{message}}</li>
+      </ul>
+    </div>
+    <div layout="row" layout-align="center center" class="invalid_field_button_div_container">
+      <md-button ng-click="closeDialog()" class="md-raised">
+        Ok
+      </md-button>
+    </div>
+  </md-dialog-content>
+</md-dialog>

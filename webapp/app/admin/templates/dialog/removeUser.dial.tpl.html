@@ -1,0 +1,19 @@
+<md-dialog class="inside_company_phone_dialog" id="md-dialog-2">
+  <md-dialog-content>
+    <div class="inside_company_phone_container" layout="row">
+      <div flex="100" layout="row" layout-align="center center">
+        <h1>Desligar</h1>
+      </div>
+    </div>
+    <form class="inside_company_phone_form" ng-submit="removeUser()" layout="column" flex>
+      <div class="" flex="60" layout="row" layout-align="center center">
+        <p>{{username}}</p>
+        <span class="span_datepicker" flex-offset="5">*Data:</span>
+        <md-datepicker id="remove_user_date_field" ng-model="date" md-placeholder="Data" flex="20"></md-datepicker>
+      </div>
+      <div layout="row" layout-align="center center">
+        <md-button id="remove_user_confirm_btn" flex="20" class="raised dark_blue_btn">Confirmar</md-button>
+      </div>
+    </form>
+  </md-dialog-content>
+</md-dialog>

@@ -1,0 +1,46 @@
+<md-card class="user_content_div">
+    <md-card-content flex="95" class="user_info" layout="column">
+        <h2 class="md-display-1 title_user_register" flex-offset="0">DEPENDENTES</h2>
+        <div layout="column" flex-offset="0" ng-if="$ctrl.edit">
+            <form>
+                <div layout="row">
+                    <md-input-container flex="100" >
+                        <label>Nome</label>
+                        <input type="text" ng-model="$ctrl.relative.name" id="relative_name" required/>
+                    </md-input-container>
+                </div>
+                <div layout="row" layout-align="start center">
+                    <md-input-container>
+                        <label>CPF</label>
+                        <input type="text" ng-model="$ctrl.relative.cpf" id="relative_cpf" required>
+                    </md-input-container>
+                    <md-input-container flex="35" flex-offset="15">
+                        <label>Nascimento:</label>
+                        <md-datepicker ng-model="$ctrl.relative.birthDate" required id="relative_date_of_birth" class="date_start_uni"></md-datepicker>
+                    </md-input-container>
+                </div>
+                <div layout="row" layout-align="start center">
+                    <md-input-container flex="auto">
+                        <label>Nome da mãe</label>
+                        <input type="text" ng-model="$ctrl.relative.filiation.motherName" id="relative_mother_name" required>
+                    </md-input-container>
+                </div>
+
+                <md-button class="md-raised" layout-align="start" class="add_button" id="relative_btn"  ng-click="$ctrl.registerRelative()">Cadastrar</md-button>
+            </form>
+        </div>
+        <div ng-if="$ctrl.relatives.length > 0" class="formationTable">
+            <div layout="row">
+                <p flex="40"><b>Nome</b></p>
+                <p flex="30"><b>CPF</b></p>
+                <p flex="25"><b>Data de nascimento</b></p>
+            </div>
+            <div layout="row" ng-repeat="relative in $ctrl.relatives">
+                <span flex="40">{{relative.name}}</span>
+                <span flex="30">{{relative.cpf | cpf}}</span>
+                <span flex="25">{{relative.birthDate | date: 'dd/MM/yyyy'}}</span>
+                <span flex="5" ng-if="$ctrl.edit"><md-icon class="pointer" ng-click="$ctrl.delete_relative(relative)" ng-bind="'delete_forever'" style="fill: #666;" id="{{relative.cpf}}"></md-icon></span>
+            </div>
+        </div>
+    </md-card-content>
+</md-card>

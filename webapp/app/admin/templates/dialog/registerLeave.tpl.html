@@ -1,0 +1,41 @@
+<md-dialog class="register_leave_dial" id="md-dialog-2">
+  <md-dialog-content>
+    <div class="inside_company_phone_container" layout="row">
+      <div flex="100" layout="column" layout-align="center center">
+        <h1 class="no_margin_bottom">Cadastrar Saída</h1>
+        <h2 class="no_margin_top">{{employee.name}}</h2>
+      </div>
+    </div>
+
+    <div class="leave_date_select_container">
+      <div flex-offset="5" layout="row" layout-align="start center">
+        <p>
+          Início:
+          <md-datepicker id="register_leave_begin_input" ng-model="leave.date"></md-datepicker>
+        </p>
+        <md-input-container flex-offset="5">
+          <label>Dias</label>
+          <input id="register_leave_number_of_days_input" type="text" ng-model="leave.duration">
+        </md-input-container>
+        <md-button id="register_leave_calculate_btn" class="md-raised btn_blue" ng-click="calculate()">Calcular</md-button>
+      </div>
+
+      <div>
+        <md-input-container flex-offset="5" flex="50">
+          <label>Justificativa</label>
+          <input id="register_leave_input_justify" type="text" ng-model="leave.justify" list="leaveTypes">
+          <datalist id="leaveTypes">
+            <option value="{{leaveType.code}} - {{leaveType.explanation}} " ng-repeat="leaveType in leaveTypes track by $index" />
+          </datalist>
+        </md-input-container>
+      </div>
+
+      <div flex-offset="5" ng-show="showInterval">
+        <p>
+          A saída será de {{leave.date | date: 'dd/MM/yyyy'}} á {{leave.endDate |date: 'dd/MM/yyyy'}}
+        </p>
+        <md-button flex-offset="5" class="md-raised btn_blue" ng-click="confirm()">Confirmar</md-button>
+      </div>
+    </div>
+  </md-dialog-content>
+</md-dialog>

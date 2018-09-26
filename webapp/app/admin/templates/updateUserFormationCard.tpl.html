@@ -1,0 +1,66 @@
+    <md-card class="user_content_div">
+        <md-card-content flex="95" class="user_info" layout="column">
+            <h2 class="md-display-1 title_user_register" flex-offset="0">FORMAÇÃO</h2>
+            <div layout="column">
+                <form>
+                    <div layout="row"  ng-if="$ctrl.edit">
+                        <md-input-container id="educationLevel" flex="50">
+                            <label>Nível de escolaridade</label>
+                            <md-select ng-model="$ctrl.education.educationLevel" required>
+                                <md-option ng-value="educationLevel" ng-repeat="educationLevel in $ctrl.educationLevels">{{educationLevel.level}}</md-option>
+                            </md-select>
+                        </md-input-container>
+
+                        <md-input-container flex="45" flex-offset="5">
+                            <label>Instituição</label>
+                            <input type="text" id="educationInstitution" ng-model="$ctrl.education.institution" required>
+                        </md-input-container>
+                    </div>
+
+                    <div layout="row" flex-offset="0" ng-if="$ctrl.edit">
+                        <md-input-container>
+                            <label>Início:</label>
+                            <md-datepicker id="educationStart" ng-model="$ctrl.education.begin" required class="date_start_uni"></md-datepicker>
+                        </md-input-container>
+                        <md-input-container flex-offset="15">
+                            <label>Fim:</label>
+                            <md-datepicker id="educationEnd" class="date_end_uni" ng-model="$ctrl.education.conclusion" required></md-datepicker>
+                        </md-input-container>
+                    </div>
+
+                    <div layout="row" layout-align="start center" ng-if="$ctrl.edit">
+                        <md-input-container flex="50">
+                            <label>Curso</label>
+                            <input type="text" id="educationCourse" ng-model="$ctrl.education.course">
+                        </md-input-container>
+                        <md-input-container flex="45" flex-offset="5">
+                            <label>Observação</label>
+                            <input type="text" id="educationObservation" ng-model="$ctrl.education.observation">
+                        </md-input-container>
+                    </div>
+                    <div layout="row" layout-align="start " flex-offset="5" ng-if="$ctrl.edit">
+                        <md-button class="md-raised" id="educationRegister" flex="20" layout-align="start" class="add_button"  ng-click="$ctrl.registerFormation()">Incluir</md-button>
+                    </div>
+                </form>
+                <div class="formationTable" ng-if="$ctrl.listOfEducation.length >0">
+                    <div layout="row">
+                        <p flex="20"><b>Nível</b></p>
+                        <p flex="20"><b>Curso</b></p>
+                        <p flex="20"><b>Início</b></p>
+                        <p flex="20"><b>Fim</b></p>
+                    </div>
+                    <div layout="row" ng-repeat="education in $ctrl.listOfEducation">
+                        <span flex="20">{{education.educationLevel.level}}</span>
+                        <span flex="20">{{education.course}}</span>
+                        <span flex="20">{{education.begin | date: 'MM/yyyy'}}</span>
+                        <span flex="20">{{education.conclusion | date: 'MM/yyyy'}}</span>
+                        <span flex="5" ng-if="$ctrl.edit">
+                            <md-button id="{{$ctrl.listOfEducation.indexOf(educationLevel.level) +2 }}" ng-click="$ctrl.deleteFormation(education)">
+                                <md-icon ng-bind="'delete_forever'" style="fill: #666;"></md-icon>
+                            </md-button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </md-card-content>
+    </md-card>

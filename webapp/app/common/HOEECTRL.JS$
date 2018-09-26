@@ -1,0 +1,16 @@
+"use strict";
+
+angular.module("pinoquio.home", ['pinoquio.educationalBackground', 'pinoquio.hobbie'])
+
+  .config(['$stateProvider', function($stateProvider) {
+    $stateProvider.state('main.home', {
+      url: '/home',
+      templateUrl: 'app/common/templates/home.tpl.html',
+      controller: 'HomeCtrl'
+    });
+  }])
+
+  .controller("HomeCtrl", ["$scope", "$anchorScroll", "$rootScope", function($scope, $anchorScroll, $rootScope) {
+
+    $scope.statementOfResponsibility = false;
+  }]);

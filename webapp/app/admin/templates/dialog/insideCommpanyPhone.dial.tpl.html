@@ -1,0 +1,21 @@
+<md-dialog class="inside_company_phone_dialog" id="md-dialog-2">
+  <md-dialog-content>
+    <div class="inside_company_phone_container" layout="row">
+      <div flex="100" layout="row" layout-align="center center">
+        <h1>Ramal</h1>
+      </div>
+    </div>
+    <form class="inside_company_phone_form" ng-submit="registerPhone()" layout="column">
+      <div flex="70" layout="row" layout-align="center center">
+        <md-input-container flex="50">
+          <label>Ramal</label>
+          <input type="text" ng-model="phone.number">
+        </md-input-container>
+      </div>
+      <div layout="row" layout-align="center center">
+        <md-button flex="20" class="raised dark_blue_btn">Confirmar</md-button>
+      </div>
+
+    </form>
+  </md-dialog-content>
+</md-dialog>

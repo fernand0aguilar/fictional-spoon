@@ -1,0 +1,24 @@
+<div class="home_container" layout="row" id="top">
+    <div layout="column" flex="55">
+        <h2 class="md-display-1 user_name_home name_user " id="home_name_user">{{$parent.employee.name}}</h2>
+        <user-data-card employee="$parent.employee"></user-data-card>
+    </div>
+    <div layout="column" flex flex-offset="5" class="user_info_uni">
+        <md-card class="user_content_div">
+            <md-card-content flex="95" class="user_info" layout="column">
+                <h2 class="md-display-1 title_user_register" flex-offset="5">Declaração de Responsabilidade</h2>
+                <div>
+                    <md-checkbox ng-model="statementOfResponsibility">
+                        Assumo inteira responsabilidade pelas informações prestadas ao Sistema de Informações SisRh pertencente e gerenciado pela Agência Espacial Brasileira. E estou ciente de que a falsidade no transcrito acima implicará nas penalidades cabíveis, previstas
+                        no Artigo 299 do Código Penal
+                    </md-checkbox>
+                </div>
+            </md-card-content>
+        </md-card>
+
+        <update-user-formation-card edit=statementOfResponsibility user=$parent.employee></update-user-formation-card>
+
+        <update-user-relatives-card edit=false user=$parent.employee></update-user-relatives-card>
+        <update-user-hobbies-card edit=false user=$parent.employee></update-user-hobbies-card>
+    </div>
+</div>

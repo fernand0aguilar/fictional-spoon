@@ -1,0 +1,35 @@
+{
+    "name": "pinoquio",
+    "version": "0.0.107",
+    "description": "",
+    "main": "app.js",
+    "moduleType": [],
+    "license": "MIT",
+    "homepage": "",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "angular": "~1.6.4",
+        "angular-animate": "~1.6.4",
+        "angular-aria": "~1.6.4",
+        "angular-material": "*",
+        "angular-material-icons": "*",
+        "angular-sweetalert": "~1.1.2",
+        "jquery": "*",
+        "angular-ui-router": "*",
+        "angular-local-storage": "*",
+        "angular-moment": "*",
+        "aeb-filter": "https://newgit.aeb.gov.br/angular-util/aeb-filters.git",
+        "aeb-directive": "https://newgit.aeb.gov.br/angular-util/aeb-directive.git",
+        "aeb-conector": "https://newgit.aeb.gov.br/angular-util/aeb-conector.git#0.0.4"
+    },
+    "devDependencies": {
+        "angular-mocks": "*"
+    }
+}
