@@ -1,0 +1,120 @@
+ before_script:
+   #variaveis do projeto
+   - if [ -z $CI_BUILD_TAG ]; then CI_BUILD_TAG='latest'; fi
+   - IMAGE=$CI_PROJECT_PATH:$CI_BUILD_TAG
+
+#
+ stages:
+   - test
+   - merge
+   - build-project
+   - create-image
+   - deploy-desenvolvimento
+   - deploy-producao
+#
+ merge:
+   stage: merge
+   only:
+     - /^issue#.*$/
+   script:
+     - git branch -D master
+     - git fetch origin master:master
+     - git checkout master
+     - git merge --no-ff $CI_BUILD_REF
+     - git commit --amend -m "Merge branch $CI_BUILD_REF_NAME into master"
+     - git push origin master
+     - git push origin --delete $CI_BUILD_REF_NAME
+
+ maven-test:
+   stage: test
+   only:
+     - /^issue#.*$/
+   script:
+     - mvn clean install
+     - cat target/site/jacoco/index.html
+
+ maven-build:
+   stage: build-project
+   only:
+     - master
+   script:
+     - rm src/main/resources/application.properties
+     - mv src/main/resources/application.properties.docker src/main/resources/application.properties
+     - rm src/main/resources/liquibase.properties
+     - mv src/main/resources/liquibase.properties.docker src/main/resources/liquibase.properties
+     - mvn clean deploy install
+     - mv target/aebrh-**-exec.jar target/aebrh.jar
+   artifacts:
+     name: "$CI_PROJECT_NAME-$CI_BUILD_TAG"
+     paths:
+       - target/aebrh.jar
+   when: manual
+
+ maven-build-tags:
+   stage: build-project
+   only:
+     - tags
+   script:
+     - rm src/main/resources/application.properties
+     - mv src/main/resources/application.properties.docker src/main/resources/application.properties
+     - rm src/main/resources/liquibase.properties
+     - mv src/main/resources/liquibase.properties.docker src/main/resources/liquibase.properties
+     - mvn clean deploy install
+     - mv target/aebrh-**-exec.jar target/aebrh.jar
+   artifacts:
+     name: "$CI_PROJECT_NAME-$CI_BUILD_TAG"
+     paths:
+       - target/aebrh.jar
+
+ create-image:
+   stage: create-image
+   only:
+     - master
+     - tags
+   script:
+     - cp target/aebrh.jar app.jar
+     - docker build . -t "$REGISTRY/$IMAGE"
+   dependencies:
+     - maven-build
+     - maven-build-tags
+
+ deploy-desenvolvimento:
+   stage: deploy-desenvolvimento
+   only:
+     - master
+     - tags
+   script:
+     - docker push $REGISTRY/$IMAGE
+     - rsh gitlab@$DNS_DESENVOLVIMENTO docker pull $REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:$CI_BUILD_TAG
+     - rsh gitlab@$DNS_DESENVOLVIMENTO docker stop $CI_PROJECT_NAME
+     - rsh gitlab@$DNS_DESENVOLVIMENTO docker rm $CI_PROJECT_NAME
+     - rsh gitlab@$DNS_DESENVOLVIMENTO docker run --name $CI_PROJECT_NAME --restart=always -d -p 0.0.0.0:$PORT  $REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:$CI_BUILD_TAG
+   environment: desenvolvimento
+
+ deploy-producao:
+   stage: deploy-producao
+   only:
+     - master
+     - tags
+   script:
+    - rsh $USER_PRODUCAO@$DNS_PRODUCAO mkdir -p /srv/$CI_PROJECT_NAME/releases
+    - rsh $USER_PRODUCAO@$DNS_PRODUCAO mkdir -p /srv/$CI_PROJECT_NAME/releases/$CI_PROJECT_NAME-$CI_BUILD_TAG
+    - scp target/aebrh.jar $USER_PRODUCAO@$DNS_PRODUCAO:/srv/$CI_PROJECT_NAME/releases/$CI_PROJECT_NAME-$CI_BUILD_TAG/
+    - echo "Copiando arquivos de configuração do tomcat"
+    - origin=`pwd`
+    - cd ~/conf/
+    - git pull --rebase -f
+    - cd ~/conf/$CI_PROJECT_NAME/production
+    - git ls-tree --name-only HEAD -r > .files
+    - tar -cf deploy-$CI_PROJECT_NAME-conf-$CI_BUILD_TAG.tar -T .files
+    - cd ${origin}
+    - mv ~/conf/$CI_PROJECT_NAME/production/deploy-$CI_PROJECT_NAME-conf-$CI_BUILD_TAG.tar deploy-$CI_PROJECT_NAME-conf-$CI_BUILD_TAG.tar
+    - scp deploy-$CI_PROJECT_NAME-conf-$CI_BUILD_TAG.tar $USER_PRODUCAO@$DNS_PRODUCAO:/srv/$CI_PROJECT_NAME/releases/$CI_PROJECT_NAME-$CI_BUILD_TAG/
+    - rsh $USER_PRODUCAO@$DNS_PRODUCAO tar -xvf /srv/$CI_PROJECT_NAME/releases/$CI_PROJECT_NAME-$CI_BUILD_TAG/deploy-$CI_PROJECT_NAME-conf-$CI_BUILD_TAG.tar -C /srv/$CI_PROJECT_NAME/releases/$CI_PROJECT_NAME-$CI_BUILD_TAG
+    - rsh $USER_PRODUCAO@$DNS_PRODUCAO rm /srv/$CI_PROJECT_NAME/releases/$CI_PROJECT_NAME-$CI_BUILD_TAG/deploy-$CI_PROJECT_NAME-conf-$CI_BUILD_TAG.tar
+    - echo "Deploy completo! Reiniciando tomcat..."
+    - rsh $USER_PRODUCAO@$DNS_PRODUCAO rm -f /srv/$CI_PROJECT_NAME/current || true
+    - ssh $USER_PRODUCAO@$DNS_PRODUCAO "ln -sv /srv/$CI_PROJECT_NAME/releases/$CI_PROJECT_NAME-$CI_BUILD_TAG /srv/$CI_PROJECT_NAME/current"
+    - rsh $USER_PRODUCAO@$DNS_PRODUCAO sh /home/$USER_PRODUCAO/start_aebrh.sh
+   when: manual
+   environment: producao

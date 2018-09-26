@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	logicalFilePath="classpath:/db/changelog/liquibase-master-changeLog.xml"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+<changeSet author="gmagalhaes" id="2016-12-08-14:19:00-1" context="test">
+        <insert tableName="funcionario">
+            <column name="id_funcionario" valueNumeric="2"/>
+            <column name="bol_ativo" valueBoolean="true"/>
+            <column name="dta_nascimento" valueDate="2016-12-12 19:30:54.002496"/>
+            <column name="dsc_fator_rh" value="O+"/>
+            <column name="dsc_cpf" value="77777777777"/>
+            <column name="dsc_email" value="mail@mail.com"/>
+            <column name="dta_entrada" valueDate="2016-12-12 19:30:54.002496"/>
+            <column name="dta_saida"/>
+            <column name="dsc_nome" value="felipe souza"/>
+            <column name="dsc_login_rede" value="felipe.sampaio"/>
+            <column name="dsc_naturalidade" value="BRASILEIRO"/>
+            <column name="int_matricula" valueNumeric="213123"/>
+            <column name="dta_cadastro" valueDate="2016-12-12 19:30:54.002496"/>
+            <column name="bol_termo_responsabilidade" valueBoolean="true"/>
+            <column name="bol_sexo" valueBoolean="true"/>
+            <column name="id_endereco" valueNumeric="2"/>
+            <column name="id_uf_nascimento" valueNumeric="7"/>
+            <column name="id_coordenacao" valueNumeric="2"/>
+            <column name="id_diretoria" valueNumeric="6"/>
+            <column name="id_divisao" valueNumeric="4"/>
+            <column name="id_documento_eleitoral" valueNumeric="1"/>
+            <column name="id_contato_emergencia"/>
+            <column name="id_categoria_funcionario" valueNumeric="5"/>
+            <column name="id_cargo_funcionario" valueNumeric="1"/>
+            <column name="id_filiacao" valueNumeric="1"/>
+            <column name="id_plano_saude"/>
+            <column name="id_ramal"/>
+            <column name="id_dados_trabalhistas" valueNumeric="1"/>
+            <column name="id_estado_civil" valueNumeric="1"/>
+            <column name="id_documento_militar"/>
+            <column name="id_terceiro"/>
+            <column name="id_servidor"/>
+            <column name="id_rg" valueNumeric="1"/>
+            <column name="id_cor_pele" valueNumeric="1"/>
+            <column name="id_conjuge"/>
+        </insert>
+        <insert tableName="funcionario">
+            <column name="id_funcionario" valueNumeric="3"/>
+            <column name="bol_ativo" valueBoolean="true"/>
+            <column name="dta_nascimento" valueDate="2016-12-12 19:30:54.011008"/>
+            <column name="dsc_fator_rh" value="O+"/>
+            <column name="dsc_cpf" value="88888888888"/>
+            <column name="dsc_email" value="mail@mail.com"/>
+            <column name="dta_entrada" valueDate="2016-12-12 19:30:54.011008"/>
+            <column name="dta_saida"/>
+            <column name="dsc_nome" value="Eduardo Santos"/>
+            <column name="dsc_login_rede" value="eduardo.santos"/>
+            <column name="dsc_naturalidade" value="BRASILEIRO"/>
+            <column name="int_matricula" valueNumeric="213123"/>
+            <column name="dta_cadastro" valueDate="2016-12-12 19:30:54.011008"/>
+            <column name="bol_termo_responsabilidade" valueBoolean="true"/>
+            <column name="bol_sexo" valueBoolean="true"/>
+            <column name="id_endereco" valueNumeric="2"/>
+            <column name="id_uf_nascimento" valueNumeric="7"/>
+            <column name="id_coordenacao" valueNumeric="2"/>
+            <column name="id_diretoria" valueNumeric="6"/>
+            <column name="id_divisao" valueNumeric="4"/>
+            <column name="id_documento_eleitoral" valueNumeric="1"/>
+            <column name="id_contato_emergencia"/>
+            <column name="id_categoria_funcionario" valueNumeric="5"/>
+            <column name="id_cargo_funcionario" valueNumeric="11"/>
+            <column name="id_filiacao" valueNumeric="1"/>
+            <column name="id_plano_saude"/>
+            <column name="id_ramal"/>
+            <column name="id_dados_trabalhistas" valueNumeric="1"/>
+            <column name="id_estado_civil" valueNumeric="1"/>
+            <column name="id_documento_militar"/>
+            <column name="id_terceiro"/>
+            <column name="id_servidor"/>
+            <column name="id_rg" valueNumeric="1"/>
+            <column name="id_cor_pele" valueNumeric="1"/>
+            <column name="id_conjuge"/>
+        </insert>
+
+        <insert tableName="funcionario">
+            <column name="id_funcionario" valueNumeric="4"/>
+            <column name="bol_ativo" valueBoolean="true"/>
+            <column name="dta_nascimento" valueDate="2016-12-12 19:30:54.023968"/>
+            <column name="dsc_fator_rh" value="O+"/>
+            <column name="dsc_cpf" value="00000000000"/>
+            <column name="dsc_email" value="mail@mail.com"/>
+            <column name="dta_entrada" valueDate="2016-12-12 19:30:54.023968"/>
+            <column name="dta_saida"/>
+            <column name="dsc_nome" value="Lucas Cavalcanti Rosa"/>
+            <column name="dsc_login_rede" value="lucas.rosa"/>
+            <column name="dsc_naturalidade" value="BRASILEIRO"/>
+            <column name="int_matricula" valueNumeric="213123"/>
+            <column name="dta_cadastro" valueDate="2016-12-12 19:30:54.023968"/>
+            <column name="bol_termo_responsabilidade" valueBoolean="true"/>
+            <column name="bol_sexo" valueBoolean="true"/>
+            <column name="id_endereco" valueNumeric="2"/>
+            <column name="id_uf_nascimento" valueNumeric="7"/>
+            <column name="id_coordenacao" valueNumeric="2"/>
+            <column name="id_diretoria" valueNumeric="6"/>
+            <column name="id_divisao" valueNumeric="4"/>
+            <column name="id_documento_eleitoral" valueNumeric="1"/>
+            <column name="id_contato_emergencia"/>
+            <column name="id_categoria_funcionario" valueNumeric="5"/>
+            <column name="id_cargo_funcionario" valueNumeric="11"/>
+            <column name="id_filiacao" valueNumeric="1"/>
+            <column name="id_plano_saude"/>
+            <column name="id_ramal"/>
+            <column name="id_dados_trabalhistas" valueNumeric="1"/>
+            <column name="id_estado_civil" valueNumeric="1"/>
+            <column name="id_documento_militar"/>
+            <column name="id_terceiro"/>
+            <column name="id_servidor"/>
+            <column name="id_rg" valueNumeric="1"/>
+            <column name="id_cor_pele" valueNumeric="1"/>
+            <column name="id_conjuge"/>
+        </insert>
+        <insert tableName="funcionario">
+            <column name="id_funcionario" valueNumeric="7"/>
+            <column name="bol_ativo" valueBoolean="true"/>
+            <column name="dta_nascimento" valueDate="2016-12-12 19:30:54.027305"/>
+            <column name="dsc_fator_rh" value="O+"/>
+            <column name="dsc_cpf" value="55555555555"/>
+            <column name="dsc_email" value="mail@mail.com"/>
+            <column name="dta_entrada" valueDate="2016-12-12 19:30:54.027305"/>
+            <column name="dta_saida"/>
+            <column name="dsc_nome" value="Fabiano Apoliano"/>
+            <column name="dsc_login_rede" value="fabiano.apoliano"/>
+            <column name="dsc_naturalidade" value="BRASILEIRO"/>
+            <column name="int_matricula" valueNumeric="213123"/>
+            <column name="dta_cadastro" valueDate="2016-12-12 19:30:54.027305"/>
+            <column name="bol_termo_responsabilidade" valueBoolean="true"/>
+            <column name="bol_sexo" valueBoolean="true"/>
+            <column name="id_endereco" valueNumeric="2"/>
+            <column name="id_uf_nascimento" valueNumeric="7"/>
+            <column name="id_coordenacao" valueNumeric="2"/>
+            <column name="id_diretoria" valueNumeric="6"/>
+            <column name="id_divisao" valueNumeric="4"/>
+            <column name="id_documento_eleitoral" valueNumeric="1"/>
+            <column name="id_contato_emergencia"/>
+            <column name="id_categoria_funcionario" valueNumeric="5"/>
+            <column name="id_cargo_funcionario" valueNumeric="11"/>
+            <column name="id_filiacao" valueNumeric="1"/>
+            <column name="id_plano_saude"/>
+            <column name="id_ramal"/>
+            <column name="id_dados_trabalhistas" valueNumeric="1"/>
+            <column name="id_estado_civil" valueNumeric="1"/>
+            <column name="id_documento_militar"/>
+            <column name="id_terceiro"/>
+            <column name="id_servidor"/>
+            <column name="id_rg" valueNumeric="1"/>
+            <column name="id_cor_pele" valueNumeric="1"/>
+            <column name="id_conjuge"/>
+        </insert>
+        <insert tableName="funcionario">
+            <column name="id_funcionario" valueNumeric="6"/>
+            <column name="bol_ativo" valueBoolean="true"/>
+            <column name="dta_nascimento" valueDate="2016-12-12 19:30:54.031314"/>
+            <column name="dsc_fator_rh" value="O+"/>
+            <column name="dsc_cpf" value="33333333333"/>
+            <column name="dsc_email" value="mail@mail.com"/>
+            <column name="dta_entrada" valueDate="2016-12-12 19:30:54.031314"/>
+            <column name="dta_saida"/>
+            <column name="dsc_nome" value="Gabriel Magalhaes"/>
+            <column name="dsc_login_rede" value="gabriel.gonzaga"/>
+            <column name="dsc_naturalidade" value="BRASILEIRO"/>
+            <column name="int_matricula" valueNumeric="213123"/>
+            <column name="dta_cadastro" valueDate="2016-12-12 19:30:54.031314"/>
+            <column name="bol_termo_responsabilidade" valueBoolean="true"/>
+            <column name="bol_sexo" valueBoolean="true"/>
+            <column name="id_endereco" valueNumeric="2"/>
+            <column name="id_uf_nascimento" valueNumeric="7"/>
+            <column name="id_coordenacao" valueNumeric="2"/>
+            <column name="id_diretoria" valueNumeric="6"/>
+            <column name="id_divisao" valueNumeric="4"/>
+            <column name="id_documento_eleitoral" valueNumeric="1"/>
+            <column name="id_contato_emergencia"/>
+            <column name="id_categoria_funcionario" valueNumeric="5"/>
+            <column name="id_cargo_funcionario" valueNumeric="11"/>
+            <column name="id_filiacao" valueNumeric="1"/>
+            <column name="id_plano_saude"/>
+            <column name="id_ramal"/>
+            <column name="id_dados_trabalhistas" valueNumeric="1"/>
+            <column name="id_estado_civil" valueNumeric="1"/>
+            <column name="id_documento_militar"/>
+            <column name="id_terceiro"/>
+            <column name="id_servidor"/>
+            <column name="id_rg" valueNumeric="1"/>
+            <column name="id_cor_pele" valueNumeric="1"/>
+            <column name="id_conjuge"/>
+        </insert>
+        <insert tableName="funcionario">
+            <column name="id_funcionario" valueNumeric="8"/>
+            <column name="bol_ativo" valueBoolean="true"/>
+            <column name="dta_nascimento" valueDate="2016-12-12 19:30:54.035048"/>
+            <column name="dsc_fator_rh" value="O+"/>
+            <column name="dsc_cpf" value="99999999999"/>
+            <column name="dsc_email" value="mail@mail.com"/>
+            <column name="dta_entrada" valueDate="2016-12-12 19:30:54.035048"/>
+            <column name="dta_saida"/>
+            <column name="dsc_nome" value="Paulo Henrique Junior"/>
+            <column name="dsc_login_rede" value="paulo.junior"/>
+            <column name="dsc_naturalidade" value="BRASILEIRO"/>
+            <column name="int_matricula" valueNumeric="213123"/>
+            <column name="dta_cadastro" valueDate="2016-12-12 19:30:54.035048"/>
+            <column name="bol_termo_responsabilidade" valueBoolean="true"/>
+            <column name="bol_sexo" valueBoolean="true"/>
+            <column name="id_endereco" valueNumeric="2"/>
+            <column name="id_uf_nascimento" valueNumeric="7"/>
+            <column name="id_coordenacao" valueNumeric="2"/>
+            <column name="id_diretoria" valueNumeric="6"/>
+            <column name="id_divisao" valueNumeric="4"/>
+            <column name="id_documento_eleitoral" valueNumeric="1"/>
+            <column name="id_contato_emergencia"/>
+            <column name="id_categoria_funcionario" valueNumeric="5"/>
+            <column name="id_cargo_funcionario" valueNumeric="11"/>
+            <column name="id_filiacao" valueNumeric="1"/>
+            <column name="id_plano_saude"/>
+            <column name="id_ramal"/>
+            <column name="id_dados_trabalhistas" valueNumeric="1"/>
+            <column name="id_estado_civil" valueNumeric="1"/>
+            <column name="id_documento_militar"/>
+            <column name="id_terceiro"/>
+            <column name="id_servidor"/>
+            <column name="id_rg" valueNumeric="1"/>
+            <column name="id_cor_pele" valueNumeric="1"/>
+            <column name="id_conjuge"/>
+        </insert>		
+		<insert tableName="saida">
+			<column name="id_saida" valueNumeric="1" />
+			<column name="dta_dia_saida" valueDate="2016-12-08" />
+			<column name="num_duracao" valueNumeric="24" />
+			<column name="dta_dia_fim_saida" valueDate="2017-01-01" />
+			<column name="txt_observacao" value="Viagem de ferias"/>
+			<column name="bol_vigente" valueBoolean="true" />
+			<column name="id_funcionario" valueNumeric="6" />
+			<column name="id_tipo_saida" valueNumeric="30" />
+		</insert>		
+		<insert tableName="saida">
+			<column name="id_saida" valueNumeric="2" />
+			<column name="dta_dia_saida" valueDate="2017-12-08" />
+			<column name="num_duracao" valueNumeric="24" />
+			<column name="dta_dia_fim_saida" valueDate="2018-01-01" />
+			<column name="txt_observacao" value="Viagem de ferias futuras"/>
+			<column name="bol_vigente" valueBoolean="true" />
+			<column name="id_funcionario" valueNumeric="6" />
+			<column name="id_tipo_saida" valueNumeric="30" />
+		</insert>	
+		<insert tableName="saida">
+			<column name="id_saida" valueNumeric="3" />
+			<column name="dta_dia_saida" valueDate="2016-12-08" />
+			<column name="num_duracao" valueNumeric="24" />
+			<column name="dta_dia_fim_saida" valueDate="2017-01-01" />
+			<column name="txt_observacao" value="Viagem de ferias"/>
+			<column name="bol_vigente" valueBoolean="true" />
+			<column name="id_funcionario" valueNumeric="1" />
+			<column name="id_tipo_saida" valueNumeric="30" />
+		</insert>
+		<insert tableName="saida">
+			<column name="id_saida" valueNumeric="4" />
+			<column name="dta_dia_saida" valueDate="2016-12-08" />
+			<column name="num_duracao" valueNumeric="365" />
+			<column name="dta_dia_fim_saida" valueDate="2017-12-08" />
+			<column name="txt_observacao" value="Viagem de ferias"/>
+			<column name="bol_vigente" valueBoolean="true" />
+			<column name="id_funcionario" valueNumeric="2" />
+			<column name="id_tipo_saida" valueNumeric="30" />
+		</insert>	
+		<insert tableName="saida">
+			<column name="id_saida" valueNumeric="5" />
+			<column name="dta_dia_saida" valueDate="2016-12-08" />
+			<column name="num_duracao" valueNumeric="24" />
+			<column name="dta_dia_fim_saida" valueDate="2017-01-01" />
+			<column name="txt_observacao" value="Viagem de ferias"/>
+			<column name="bol_vigente" valueBoolean="true" />
+			<column name="id_funcionario" valueNumeric="3" />
+			<column name="id_tipo_saida" valueNumeric="30" />
+		</insert>	
+		<insert tableName="saida">
+			<column name="id_saida" valueNumeric="6" />
+			<column name="dta_dia_saida" valueDate="2016-12-08" />
+			<column name="num_duracao" valueNumeric="24" />
+			<column name="dta_dia_fim_saida" valueDate="2017-01-01" />
+			<column name="txt_observacao" value="Viagem de ferias"/>
+			<column name="bol_vigente" valueBoolean="true" />
+			<column name="id_funcionario" valueNumeric="4" />
+			<column name="id_tipo_saida" valueNumeric="30" />
+		</insert>	
+		<insert tableName="saida">
+			<column name="id_saida" valueNumeric="7" />
+			<column name="dta_dia_saida" valueDate="2016-12-08" />
+			<column name="num_duracao" valueNumeric="24" />
+			<column name="dta_dia_fim_saida" valueDate="2017-01-01" />
+			<column name="txt_observacao" value="Viagem de ferias"/>
+			<column name="bol_vigente" valueBoolean="true" />
+			<column name="id_funcionario" valueNumeric="7" />
+			<column name="id_tipo_saida" valueNumeric="30" />
+		</insert>	
+		<insert tableName="saida">
+			<column name="id_saida" valueNumeric="8" />
+			<column name="dta_dia_saida" valueDate="2017-12-08" />
+			<column name="num_duracao" valueNumeric="24" />
+			<column name="dta_dia_fim_saida" valueDate="2018-01-01" />
+			<column name="txt_observacao" value="Viagem de ferias futuras"/>
+			<column name="bol_vigente" valueBoolean="true" />
+			<column name="id_funcionario" valueNumeric="7" />
+			<column name="id_tipo_saida" valueNumeric="30" />
+		</insert>		
+		
+		<insert tableName="diretoria">
+			<column name="id_diretoria" valueNumeric="10" />
+			<column name="dsc_sigla" value="TESTE" />
+			<column name="dsc_email" value="teste@teste.com" />
+			<column name="bol_extinto" valueBoolean="false" />
+			<column name="dsc_nome" value="Teste E Somente TEste" />
+			<column name="dsc_obs" value="Diretoria Fictícia" />
+			<column name="id_funcionario_diretor" valueNumeric="6" />
+		</insert>
+		
+		<update tableName="funcionario">
+			<column name="id_diretoria" valueNumeric="10"></column>
+			<where>id_funcionario = 1</where>
+		</update>
+		
+		<update tableName="funcionario">
+			<column name="id_diretoria" valueNumeric="10"></column>
+			<where>id_funcionario = 6</where>
+		</update>
+		
+	</changeSet>
+</databaseChangeLog>

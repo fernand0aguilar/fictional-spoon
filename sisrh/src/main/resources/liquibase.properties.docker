@@ -1,0 +1,12 @@
+changeLogFile = classpath:/db/changelog/liquibase-master-changeLog.xml
+outputChangeLogFile= src/main/resources/db/changelog/liquibase-master-changeLog.xml
+driver = org.postgresql.Driver
+url = jdbc:postgresql://docker.aeb.gov.br:5433/aebrh
+username = aebrh
+password = aebrh
+verbose = true
+dropFirst = false
+referenceUrl=jdbc:postgresql://docker.aeb.gov.br:5433/aebrh
+referenceUsername=aebrh
+referencePassword=aebrh
+contexts=production

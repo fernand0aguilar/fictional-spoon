@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+	<changeSet author="kairala" id="201612081140" context="production">
+		<!-- EMPRESA -->
+		<insert tableName="endereco">
+			<column name="id_endereco" valueNumeric="10" />
+			<column name="dsc_logradouro" value="Q Qof Conjunto A, Lote 11, Loja, 01" />
+			<column name="dsc_complemento" value="Parte 01" />
+			<column name="dsc_bairro" value="Candangolandia" />
+			<column name="dsc_numero" value="" />
+			<column name="dsc_cep" value="71727501" />
+			<column name="id_cidade" valueNumeric="9021" />
+		</insert>
+
+		<insert tableName="telefone">
+			<column name="id_telefone" value="6" />
+			<column name="dsc_ddd" value="61" />
+			<column name="dsc_numero" value="30414284" />
+			<column name="dsc_codigo_pais" value="+55" />
+			<column name="id_categoria_telefone" valueNumeric="5" />
+
+		</insert>
+
+		<insert tableName="empresa">
+			<column name="id_empresa" valueNumeric="1" />
+			<column name="dsc_nome" value="3R Construções e Serviços EIRELI" />
+			<column name="dsc_nome_fantasia" value="" />
+			<column name="dsc_cnpj" value="10660342000191" />
+			<column name="dsc_url_site" value="" />
+			<column name="dsc_email" value="3rgrupo@3rgrupo.com.br" />
+			<column name="bol_vigente" valueBoolean="true" />
+			<column name="dsc_obs" value="Empresa de Copeiragem" />
+			<column name="dta_cadastro" valueDate="2016-12-08 11:59:02.853991" />
+			<column name="dta_update" valueDate="2016-12-08 11:59:02.853991" />
+			<column name="id_endereco" value="10" />
+			<column name="id_telefone" value="6" />
+		</insert>
+		<!-- EMPRESA -->
+		<insert tableName="endereco">
+			<column name="id_endereco" valueNumeric="11" />
+			<column name="dsc_logradouro" value="" />
+			<column name="dsc_complemento" value="" />
+			<column name="dsc_bairro" value="" />
+			<column name="dsc_numero" value="" />
+			<column name="dsc_cep" value="" />
+			<column name="id_cidade" valueNumeric="9021" />
+		</insert>
+
+		<insert tableName="telefone">
+			<column name="id_telefone" value="7" />
+			<column name="dsc_ddd" value="" />
+			<column name="dsc_numero" value="" />
+			<column name="dsc_codigo_pais" value="" />
+			<column name="id_categoria_telefone" valueNumeric="5" />
+
+		</insert>
+
+		<insert tableName="empresa">
+			<column name="id_empresa" valueNumeric="2" />
+			<column name="dsc_nome" value="Abc Transportes" />
+			<column name="dsc_nome_fantasia" value="" />
+			<column name="dsc_cnpj" value="" />
+			<column name="dsc_url_site" value="" />
+			<column name="dsc_email" value="" />
+			<column name="bol_vigente" valueBoolean="true" />
+			<column name="dsc_obs" value="Empresa dos Motoristas" />
+			<column name="dta_cadastro" valueDate="2016-12-08 11:59:02.853991" />
+			<column name="dta_update" valueDate="2016-12-08 11:59:02.853991" />
+			<column name="id_endereco" value="11" />
+			<column name="id_telefone" value="7" />
+		</insert>
+		<!-- EMPRESA -->
+		<insert tableName="endereco">
+			<column name="id_endereco" valueNumeric="12" />
+			<column name="dsc_logradouro" value="" />
+			<column name="dsc_complemento" value="" />
+			<column name="dsc_bairro" value="" />
+			<column name="dsc_numero" value="" />
+			<column name="dsc_cep" value="" />
+			<column name="id_cidade" valueNumeric="9021" />
+		</insert>
+
+		<insert tableName="telefone">
+			<column name="id_telefone" value="8" />
+			<column name="dsc_ddd" value="" />
+			<column name="dsc_numero" value="" />
+			<column name="dsc_codigo_pais" value="+55" />
+			<column name="id_categoria_telefone" valueNumeric="5" />
+
+		</insert>
+
+		<insert tableName="empresa">
+			<column name="id_empresa" valueNumeric="3" />
+			<column name="dsc_nome" value="Sempre Alerta" />
+			<column name="dsc_nome_fantasia" value="" />
+			<column name="dsc_cnpj" value="" />
+			<column name="dsc_url_site" value="" />
+			<column name="dsc_email" value="" />
+			<column name="bol_vigente" valueBoolean="true" />
+			<column name="dsc_obs" value="Empresa de Apoio Tercerizado" />
+			<column name="dta_cadastro" valueDate="2016-12-08 11:59:02.853991" />
+			<column name="dta_update" valueDate="2016-12-08 11:59:02.853991" />
+			<column name="id_endereco" value="12" />
+			<column name="id_telefone" value="8" />
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>

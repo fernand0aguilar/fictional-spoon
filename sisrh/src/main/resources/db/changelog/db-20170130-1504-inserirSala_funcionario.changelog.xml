@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext 
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd 
+		http://www.liquibase.org/xml/ns/dbchangelog 
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+	<changeSet author="kairala" id="201701301504" context="production">
+		<addColumn tableName="funcionario">
+			<column name="id_local_interno" type="BIGINT">
+				<constraints nullable="true" />
+			</column>
+		</addColumn>
+		<addForeignKeyConstraint baseColumnNames="id_local_interno"
+			baseTableName="funcionario" constraintName="funcionario_local_interno_fk"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="id_local_interno"
+			referencedTableName="local_interno" />
+	</changeSet>
+</databaseChangeLog>

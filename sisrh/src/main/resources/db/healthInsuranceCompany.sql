@@ -1,0 +1,1 @@
+insert into empresa_plano_de_saude (id_empresa_plano_de_saude, dsc_nome) VALUES (1, 'SIS');

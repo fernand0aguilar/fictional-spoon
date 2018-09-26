@@ -1,0 +1,1 @@
+INSERT INTO categoria_funcionario (ID_CATEGORIA_FUNCIONARIO, DSC_CATEGORIA_FUNCIONARIO) VALUES (1,'Outros'),(2,'Convêniado'),(3,'Estagiário'),(4,'Terceirizado'),(5,'Servidor'),(6,'Sem vínculo'),(7,'Bolsista');

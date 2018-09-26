@@ -1,0 +1,2660 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="kairala (generated)" id="1480953042466-1" context="production">
+        <createSequence sequenceName="banco_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-2" context="production">
+        <createSequence sequenceName="cargo_funcionario_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-3" context="production">
+        <createSequence sequenceName="categoria_funcionario_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-4" context="production">
+        <createSequence sequenceName="categoria_telefone_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-5" context="production">
+        <createSequence sequenceName="cidade_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-6" context="production">
+        <createSequence sequenceName="conjuge_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-7" context="production">
+        <createSequence sequenceName="conta_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-8" context="production">
+        <createSequence sequenceName="contato_emergencia_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-9" context="production">
+        <createSequence sequenceName="coordenacao_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-10" context="production">
+        <createSequence sequenceName="cor_pele_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-11" context="production">
+        <createSequence sequenceName="dados_trabalhistas_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-12" context="production">
+        <createSequence sequenceName="dependente_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-13" context="production">
+        <createSequence sequenceName="diretoria_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-14" context="production">
+        <createSequence sequenceName="divisao_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-15" context="production">
+        <createSequence sequenceName="document_eleitoral_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-16" context="production">
+        <createSequence sequenceName="documento_militar_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-17" context="production">
+        <createSequence sequenceName="empresa_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-18" context="production">
+        <createSequence sequenceName="empresa_plano_de_saude_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-19" context="production">
+        <createSequence sequenceName="endereco_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-20" context="production">
+        <createSequence sequenceName="estado_civil_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-21" context="production">
+        <createSequence sequenceName="filiacao_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-22" context="production">
+        <createSequence sequenceName="formacao_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-23" context="production">
+        <createSequence sequenceName="functionario_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-24" context="production">
+        <createSequence sequenceName="historico_funcionario_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-25" context="production">
+        <createSequence sequenceName="hobbie_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-26" context="production">
+        <createSequence sequenceName="local_interno_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-27" context="production">
+        <createSequence sequenceName="nivel_formacao_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-28" context="production">
+        <createSequence sequenceName="orgao_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-29" context="production">
+        <createSequence sequenceName="plano_saude_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-30" context="production">
+        <createSequence sequenceName="predio_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-31" context="production">
+        <createSequence sequenceName="rg_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-32" context="production">
+        <createSequence sequenceName="saida_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-33" context="production">
+        <createSequence sequenceName="servidor_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-34" context="production">
+        <createSequence sequenceName="telefone_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-35" context="production">
+        <createSequence sequenceName="terceiro_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-36" context="production">
+        <createSequence sequenceName="tipo_saida_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-37" context="production">
+        <createSequence sequenceName="uf_id_seq"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-38" context="production">
+        <createTable tableName="banco">
+            <column name="id_banco" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="int_codigo_banco" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_banco" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-39" context="production">
+        <createTable tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_cargo" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_obs" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-40" context="production">
+        <createTable tableName="categoria_funcionario">
+            <column name="id_categoria_funcionario" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_categoria_funcionario" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-41" context="production">
+        <createTable tableName="categoria_telefone">
+            <column name="id_categoria_telefone" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_categoria_telefone" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-42" context="production">
+        <createTable tableName="cidade">
+            <column name="id_cidade" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_sigla_cidade" type="VARCHAR(255)"/>
+            <column name="dsc_nome_cidade" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_uf" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-43" context="production">
+        <createTable tableName="conjuge">
+            <column name="id_conjuge" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dta_nascimento_conjuge" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_conjuge" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-44" context="production">
+        <createTable tableName="conta">
+            <column name="id_conta" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_conta" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="bol_ativa" type="BOOL">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_agencia" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_banco" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_funcionario" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-45" context="production">
+        <createTable tableName="contato_emergencia">
+            <column name="id_contato_emergencia" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_nome" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_telefone" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-46" context="production">
+        <createTable tableName="coordenacao">
+            <column name="id_coordenacao" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_sigla" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_nome" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_funcionario_coordenador" type="BIGINT"/>
+            <column name="id_diretoria" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-47" context="production">
+        <createTable tableName="cor_pele">
+            <column name="id_cor_pele" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_cor_de_pele" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-48" context="production">
+        <createTable tableName="dados_trabalhistas">
+            <column name="id_daods_trabalhistas" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dta_primeiro_emprego" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="dsc_pis_pasep" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-49" context="production">
+        <createTable tableName="dependente">
+            <column name="id_dependente" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dta_nascimento" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_cpf" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_nome" type="VARCHAR(255)"/>
+            <column name="id_funcionario" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_filiacao" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-50" context="production">
+        <createTable tableName="diretoria">
+            <column name="id_diretoria" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_sigla" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_email" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="bol_extinto" type="BOOL">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_nome" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_obs" type="VARCHAR(255)"/>
+            <column name="id_funcionario_diretor" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-51" context="production">
+        <createTable tableName="divisao">
+            <column name="id_divisao" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_sigla" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_nome" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_coordenacao" type="BIGINT"/>
+            <column name="id_funcionario_divisao" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-52" context="production">
+        <createTable tableName="documento_eleitoral">
+            <column name="id_documento_eleitoral" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_secao_titulo_eleitor" type="VARCHAR(255)"/>
+            <column name="dsc_titulo_eleitor" type="VARCHAR(255)"/>
+            <column name="dsc_zona_titulo_eleitor" type="VARCHAR(255)"/>
+            <column name="id_uf" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-53" context="production">
+        <createTable tableName="documento_militar">
+            <column name="id_documento_militar" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_categoria_reservista" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_numero_reservista" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_serie_reservista" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_uf" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-54" context="production">
+        <createTable tableName="empresa">
+            <column name="id_empresa" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_cnpj" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_email" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_nome_fantasia" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_nome" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_obs" type="VARCHAR(255)"/>
+            <column name="bol_vigente" type="BOOL">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dta_cadastro" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_url_site" type="VARCHAR(255)"/>
+            <column name="dta_update" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_endereco" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_telefone_fax" type="BIGINT"/>
+            <column name="id_telefone" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_telefone_secundario" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-55" context="production">
+        <createTable tableName="empresa_plano_de_saude">
+            <column name="id_empresa_plano_de_saude" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_nome" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-56" context="production">
+        <createTable tableName="endereco">
+            <column name="id_endereco" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_logradouro" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_complemento" type="VARCHAR(255)"/>
+            <column name="dsc_bairro" type="VARCHAR(255)"/>
+            <column name="dsc_numero" type="VARCHAR(255)"/>
+            <column name="dsc_cep" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_cidade" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-57" context="production">
+        <createTable tableName="estado_civil">
+            <column name="id_estado_civil" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_estado_civil" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-58" context="production">
+        <createTable tableName="filiacao">
+            <column name="id_filiacao" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_nome_pai" type="VARCHAR(255)"/>
+            <column name="dsc_nome_mae" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-59" context="production">
+        <createTable tableName="formacao">
+            <column name="id_formacao" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dta_inicio" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="dta_conclusao" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="dsc_curso" type="VARCHAR(255)"/>
+            <column name="dsc_instituicao" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_obs" type="VARCHAR(255)"/>
+            <column name="dta_atualizacao" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="id_nivel_formacao" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_funcionario" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-60" context="production">
+        <createTable tableName="funcionario">
+            <column name="id_funcionario" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="bol_ativo" type="BOOL">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dta_nascimento" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_fator_rh" type="VARCHAR(255)"/>
+            <column name="dsc_cpf" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_email" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dta_entrada" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dta_saida" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="dsc_nome" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_login_rede" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_naturalidade" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="int_matricula" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dta_cadastro" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="bol_termo_responsabilidade" type="BOOL">
+                <constraints nullable="false"/>
+            </column>
+            <column name="bol_sexo" type="BOOL">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_endereco" type="BIGINT"/>
+            <column name="id_uf_nascimento" type="BIGINT"/>
+            <column name="id_coordenacao" type="BIGINT"/>
+            <column name="id_diretoria" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_divisao" type="BIGINT"/>
+            <column name="id_documento_eleitoral" type="BIGINT"/>
+            <column name="id_contato_emergencia" type="BIGINT"/>
+            <column name="id_categoria_funcionario" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_cargo_funcionario" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_filiacao" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_plano_saude" type="BIGINT"/>
+            <column name="id_ramal" type="BIGINT"/>
+            <column name="id_dados_trabalhistas" type="BIGINT"/>
+            <column name="id_estado_civil" type="BIGINT"/>
+            <column name="id_documento_militar" type="BIGINT"/>
+            <column name="id_terceiro" type="BIGINT"/>
+            <column name="id_servidor" type="BIGINT"/>
+            <column name="id_rg" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_cor_pele" type="BIGINT"/>
+            <column name="id_conjuge" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-61" context="production">
+        <createTable tableName="historico_funcionario">
+            <column name="id_historico_funcionario" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="bol_ativo" type="BOOL">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dta_saida" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="dta_alteracao" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_coordenacao" type="BIGINT"/>
+            <column name="id_diretoria" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_divisao" type="BIGINT"/>
+            <column name="id_funcionario" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_categoria_funcionario" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_cargo_funcionario" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-62" context="production">
+        <createTable tableName="hobbie">
+            <column name="id_hobbie" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_description" type="VARCHAR(255)"/>
+            <column name="id_funcionario" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-63" context="production">
+        <createTable tableName="local_interno">
+            <column name="id_local_interno" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dta_cadastro" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_numero_sala" type="VARCHAR(255)"/>
+            <column name="id_predio" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_telefone_ramal" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-64" context="production">
+        <createTable tableName="nivel_formacao">
+            <column name="id_nivel_formacao" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_nivel_formacao" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-65" context="production">
+        <createTable tableName="orgao">
+            <column name="id_orgao" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_sigla" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_codigo" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_nome" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_url_site" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_endereco" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_cidade" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_telefone_fax" type="BIGINT"/>
+            <column name="id_telefone" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_uf" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-66" context="production">
+        <createTable tableName="plano_saude">
+            <column name="id_plano_saude" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dta_validade" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="dsc_numero" type="VARCHAR(255)"/>
+            <column name="id_empresa_plano_de_saude" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-67" context="production">
+        <createTable tableName="predio">
+            <column name="id_predio" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_predio" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-68" context="production">
+        <createTable tableName="rg">
+            <column name="id_rg" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dta_expedicao" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_orgao_emissor" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_rg" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_uf" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-69" context="production">
+        <createTable tableName="saida">
+            <column name="id_saida" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dta_dia_saida" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="num_duracao" type="BIGINT"/>
+            <column name="dta_dia_fim_saida" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="txt_observacao" type="VARCHAR(255)"/>
+            <column name="bol_vigente" type="BOOL"/>
+            <column name="id_funcionario" type="BIGINT"/>
+            <column name="id_tipo_saida" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-70" context="production">
+        <createTable tableName="servidor">
+            <column name="id_servidor" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dta_ingresso" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dta_ato_nomeacao" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dta_publicacao_dou" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="bol_aposentado" type="BOOL">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_coordenacao_origem" type="BIGINT"/>
+            <column name="id_diretoria_origem" type="BIGINT"/>
+            <column name="id_divisao_origim" type="BIGINT"/>
+            <column name="id_orgao" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-71" context="production">
+        <createTable tableName="telefone">
+            <column name="id_telefone" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_codigo_pais" type="VARCHAR(255)"/>
+            <column name="dsc_ddd" type="VARCHAR(255)"/>
+            <column name="dsc_numero" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_categoria_telefone" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-72" context="production">
+        <createTable tableName="telefone_funcionario">
+            <column name="id_funcionario" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_telefone" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-73" context="production">
+        <createTable tableName="terceiro">
+            <column name="id_terceiro" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="bol_ativo" type="BOOL">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_clt" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_orgao_clt" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dta_expedicao_clt" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dta_entrada" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dta_saida" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="dta_atualizacao" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_empresa" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_uf" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-74" context="production">
+        <createTable tableName="tipo_saida">
+            <column name="id_tipo_saida" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="txt_codigo" type="VARCHAR(255)"/>
+            <column name="txt_nome_tipo" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-75" context="production">
+        <createTable tableName="uf">
+            <column name="id_uf" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_sigla" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dsc_nome" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-76" context="production">
+        <addPrimaryKey columnNames="id_banco" constraintName="banco_pkey" tableName="banco"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-77" context="production">
+        <addPrimaryKey columnNames="id_cargo_funcionario" constraintName="cargo_funcionario_pkey" tableName="cargo_funcionario"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-78" context="production">
+        <addPrimaryKey columnNames="id_categoria_funcionario" constraintName="categoria_funcionario_pkey" tableName="categoria_funcionario"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-79" context="production">
+        <addPrimaryKey columnNames="id_categoria_telefone" constraintName="categoria_telefone_pkey" tableName="categoria_telefone"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-80" context="production">
+        <addPrimaryKey columnNames="id_cidade" constraintName="cidade_pkey" tableName="cidade"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-81" context="production">
+        <addPrimaryKey columnNames="id_conjuge" constraintName="conjuge_pkey" tableName="conjuge"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-82" context="production">
+        <addPrimaryKey columnNames="id_conta" constraintName="conta_pkey" tableName="conta"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-83" context="production">
+        <addPrimaryKey columnNames="id_contato_emergencia" constraintName="contato_emergencia_pkey" tableName="contato_emergencia"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-84" context="production">
+        <addPrimaryKey columnNames="id_coordenacao" constraintName="coordenacao_pkey" tableName="coordenacao"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-85" context="production">
+        <addPrimaryKey columnNames="id_cor_pele" constraintName="cor_pele_pkey" tableName="cor_pele"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-86" context="production">
+        <addPrimaryKey columnNames="id_daods_trabalhistas" constraintName="dados_trabalhistas_pkey" tableName="dados_trabalhistas"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-87" context="production">
+        <addPrimaryKey columnNames="id_dependente" constraintName="dependente_pkey" tableName="dependente"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-88" context="production">
+        <addPrimaryKey columnNames="id_diretoria" constraintName="diretoria_pkey" tableName="diretoria"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-89" context="production">
+        <addPrimaryKey columnNames="id_divisao" constraintName="divisao_pkey" tableName="divisao"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-90" context="production">
+        <addPrimaryKey columnNames="id_documento_eleitoral" constraintName="documento_eleitoral_pkey" tableName="documento_eleitoral"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-91" context="production">
+        <addPrimaryKey columnNames="id_documento_militar" constraintName="documento_militar_pkey" tableName="documento_militar"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-92" context="production">
+        <addPrimaryKey columnNames="id_empresa" constraintName="empresa_pkey" tableName="empresa"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-93" context="production">
+        <addPrimaryKey columnNames="id_empresa_plano_de_saude" constraintName="empresa_plano_de_saude_pkey" tableName="empresa_plano_de_saude"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-94" context="production">
+        <addPrimaryKey columnNames="id_endereco" constraintName="endereco_pkey" tableName="endereco"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-95" context="production">
+        <addPrimaryKey columnNames="id_estado_civil" constraintName="estado_civil_pkey" tableName="estado_civil"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-96" context="production">
+        <addPrimaryKey columnNames="id_filiacao" constraintName="filiacao_pkey" tableName="filiacao"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-97" context="production">
+        <addPrimaryKey columnNames="id_formacao" constraintName="formacao_pkey" tableName="formacao"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-98" context="production">
+        <addPrimaryKey columnNames="id_funcionario" constraintName="funcionario_pkey" tableName="funcionario"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-99" context="production">
+        <addPrimaryKey columnNames="id_historico_funcionario" constraintName="historico_funcionario_pkey" tableName="historico_funcionario"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-100" context="production">
+        <addPrimaryKey columnNames="id_hobbie" constraintName="hobbie_pkey" tableName="hobbie"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-101" context="production">
+        <addPrimaryKey columnNames="id_local_interno" constraintName="local_interno_pkey" tableName="local_interno"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-102" context="production">
+        <addPrimaryKey columnNames="id_nivel_formacao" constraintName="nivel_formacao_pkey" tableName="nivel_formacao"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-103" context="production">
+        <addPrimaryKey columnNames="id_orgao" constraintName="orgao_pkey" tableName="orgao"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-104" context="production">
+        <addPrimaryKey columnNames="id_plano_saude" constraintName="plano_saude_pkey" tableName="plano_saude"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-105" context="production">
+        <addPrimaryKey columnNames="id_predio" constraintName="predio_pkey" tableName="predio"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-106" context="production">
+        <addPrimaryKey columnNames="id_rg" constraintName="rg_pkey" tableName="rg"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-107" context="production">
+        <addPrimaryKey columnNames="id_saida" constraintName="saida_pkey" tableName="saida"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-108" context="production">
+        <addPrimaryKey columnNames="id_servidor" constraintName="servidor_pkey" tableName="servidor"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-109" context="production">
+        <addPrimaryKey columnNames="id_telefone" constraintName="telefone_pkey" tableName="telefone"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-110" context="production">
+        <addPrimaryKey columnNames="id_terceiro" constraintName="terceiro_pkey" tableName="terceiro"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-111" context="production">
+        <addPrimaryKey columnNames="id_tipo_saida" constraintName="tipo_saida_pkey" tableName="tipo_saida"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-112" context="production">
+        <addPrimaryKey columnNames="id_uf" constraintName="uf_pkey" tableName="uf"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-113" context="production">
+        <addUniqueConstraint columnNames="dsc_cpf" constraintName="uk_havj3kaql6uvlyojwtt7n3nxg" tableName="funcionario"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-114" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_estado_civil" baseTableName="funcionario" constraintName="fk1q55cq76touyhq1ycnusnmtm4" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_estado_civil" referencedTableName="estado_civil"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-115" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_filiacao" baseTableName="dependente" constraintName="fk2apv7aevqj7bwvgkxejq5jfel" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_filiacao" referencedTableName="filiacao"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-116" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_uf" baseTableName="orgao" constraintName="fk2oy6annv0d6xwtn6jmtoxuct5" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_uf" referencedTableName="uf"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-117" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_uf" baseTableName="cidade" constraintName="fk2uhosncgs24hj87msga541ftu" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_uf" referencedTableName="uf"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-118" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_diretoria_origem" baseTableName="servidor" constraintName="fk3jp53o6ulsy639mx70cu39bkb" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_diretoria" referencedTableName="diretoria"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-119" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_cidade" baseTableName="orgao" constraintName="fk3yfr9el6en62vglc7yafmufk0" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_cidade" referencedTableName="cidade"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-120" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_funcionario" baseTableName="saida" constraintName="fk448lkos3j2mmm3uut9p4dmasp" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_funcionario" referencedTableName="funcionario"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-121" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_categoria_telefone" baseTableName="telefone" constraintName="fk4i1eaklv1abk1asouqftiqp17" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_categoria_telefone" referencedTableName="categoria_telefone"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-122" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_nivel_formacao" baseTableName="formacao" constraintName="fk4qqd4g3f2xitmb2u118k2lkkw" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_nivel_formacao" referencedTableName="nivel_formacao"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-123" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_divisao" baseTableName="funcionario" constraintName="fk5e9ram63jngn3pwa7wsoae93q" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_divisao" referencedTableName="divisao"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-124" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_tipo_saida" baseTableName="saida" constraintName="fk5erb8nsl9cevrwjnusmxgxvbn" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_tipo_saida" referencedTableName="tipo_saida"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-125" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_dados_trabalhistas" baseTableName="funcionario" constraintName="fk6u9qg8a2elj3fir4y57b4ympx" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_daods_trabalhistas" referencedTableName="dados_trabalhistas"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-126" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_ramal" baseTableName="funcionario" constraintName="fk7f4f49t3nm04sofdcrm592tpu" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_telefone" referencedTableName="telefone"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-127" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_telefone_fax" baseTableName="empresa" constraintName="fk81sah0n1th2q4qlaog9dfn3lp" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_telefone" referencedTableName="telefone"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-128" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_telefone" baseTableName="contato_emergencia" constraintName="fk82bgqoemci16p6cm9e7h9d0s3" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_telefone" referencedTableName="telefone"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-129" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_uf" baseTableName="rg" constraintName="fk87bt2vs37oivkr94g3t0rdsu1" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_uf" referencedTableName="uf"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-130" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_uf" baseTableName="documento_militar" constraintName="fk8bhca2h0f40rjvqe1e7lj9uwa" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_uf" referencedTableName="uf"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-131" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_uf" baseTableName="documento_eleitoral" constraintName="fk8cke7oupvtkgh8dal78phl0kg" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_uf" referencedTableName="uf"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-132" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_conjuge" baseTableName="funcionario" constraintName="fk913w59x27e4qg57g9ctdwdren" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_conjuge" referencedTableName="conjuge"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-133" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_coordenacao" baseTableName="divisao" constraintName="fk930u2raoi3hl64ev2le2w3t9j" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_coordenacao" referencedTableName="coordenacao"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-134" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_endereco" baseTableName="funcionario" constraintName="fk93g4pkk612dmp9yk3uvm5wsad" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_endereco" referencedTableName="endereco"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-135" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_orgao" baseTableName="servidor" constraintName="fk9m30n43ba3u9dtc6ycunrotty" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_orgao" referencedTableName="orgao"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-136" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_endereco" baseTableName="empresa" constraintName="fka5mardkoa528berll5vusgyoh" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_endereco" referencedTableName="endereco"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-137" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_cargo_funcionario" baseTableName="funcionario" constraintName="fkaewwawuxy055w75n5uveerwmd" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_cargo_funcionario" referencedTableName="cargo_funcionario"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-138" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_coordenacao_origem" baseTableName="servidor" constraintName="fkas19or78lxui9jg4liwuexrpl" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_coordenacao" referencedTableName="coordenacao"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-139" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_telefone_fax" baseTableName="orgao" constraintName="fkbp96d8nooshl4jsfecv4uv9rb" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_telefone" referencedTableName="telefone"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-140" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_banco" baseTableName="conta" constraintName="fkcu48crbc0neq2ledttx0p5x1a" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_banco" referencedTableName="banco"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-141" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_categoria_funcionario" baseTableName="historico_funcionario" constraintName="fkd2gnhw3qry22ox96qgikwactk" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_categoria_funcionario" referencedTableName="categoria_funcionario"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-142" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_funcionario" baseTableName="conta" constraintName="fkdmimys8lco5oo40b3akbsf41l" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_funcionario" referencedTableName="funcionario"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-143" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_diretoria" baseTableName="coordenacao" constraintName="fke6hsackvh19ijsgsmduqbv6ab" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_diretoria" referencedTableName="diretoria"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-144" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_funcionario" baseTableName="dependente" constraintName="fkfele45ixhfla0vi27wlrg0sp6" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_funcionario" referencedTableName="funcionario"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-145" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_contato_emergencia" baseTableName="funcionario" constraintName="fkffm9ou1rh3x5hbccr6ljrqgha" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_contato_emergencia" referencedTableName="contato_emergencia"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-146" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_documento_eleitoral" baseTableName="funcionario" constraintName="fkfi8na4us95d8rqgxbbcdwh2jt" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_documento_eleitoral" referencedTableName="documento_eleitoral"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-147" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_telefone" baseTableName="telefone_funcionario" constraintName="fkfr3txg0e2pe64jqeo39g7nl2o" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_telefone" referencedTableName="telefone"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-148" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_filiacao" baseTableName="funcionario" constraintName="fkg8628b19y0itdly6t6bv3pb6e" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_filiacao" referencedTableName="filiacao"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-149" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_telefone" baseTableName="empresa" constraintName="fkggof21tyunih6apc106f77ib" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_telefone" referencedTableName="telefone"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-150" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_endereco" baseTableName="orgao" constraintName="fkgt2yipgx5e81fm28d8t7agr0r" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_endereco" referencedTableName="endereco"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-151" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_funcionario_coordenador" baseTableName="coordenacao" constraintName="fkgucpp1yncfm0fxjajpm5mma43" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_funcionario" referencedTableName="funcionario"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-152" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_diretoria" baseTableName="historico_funcionario" constraintName="fkgwlpx7232sfb0ce2584e28f91" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_diretoria" referencedTableName="diretoria"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-153" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_cidade" baseTableName="endereco" constraintName="fkhu4avfrkfp65jedddkxe70r9a" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_cidade" referencedTableName="cidade"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-154" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_cargo_funcionario" baseTableName="historico_funcionario" constraintName="fki1w724p627dgdjl5g9vfoi3dp" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_cargo_funcionario" referencedTableName="cargo_funcionario"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-155" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_coordenacao" baseTableName="historico_funcionario" constraintName="fki8weai9sai9nfel7n99fi1hi9" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_coordenacao" referencedTableName="coordenacao"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-156" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_empresa" baseTableName="terceiro" constraintName="fkioure51wdp5m9sbcflfi9pgj6" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_empresa" referencedTableName="empresa"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-157" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_divisao_origim" baseTableName="servidor" constraintName="fkivfi1hjqt77q7l2nsxf5yl0xq" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_divisao" referencedTableName="divisao"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-158" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_documento_militar" baseTableName="funcionario" constraintName="fkj1a5k0d8e3u6y6f256qgcexhf" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_documento_militar" referencedTableName="documento_militar"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-159" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_empresa_plano_de_saude" baseTableName="plano_saude" constraintName="fkjsdqw2sbddeaoctho3scpx1ed" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_empresa_plano_de_saude" referencedTableName="empresa_plano_de_saude"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-160" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_funcionario_divisao" baseTableName="divisao" constraintName="fkk9jfrw0w3ywv4sluxneiye5f5" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_funcionario" referencedTableName="funcionario"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-161" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_rg" baseTableName="funcionario" constraintName="fkktc6khydtodq6b2o16ptfepui" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_rg" referencedTableName="rg"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-162" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_plano_saude" baseTableName="funcionario" constraintName="fkkul7f70e0pwtqlr59yy24pa7i" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_plano_saude" referencedTableName="plano_saude"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-163" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_cor_pele" baseTableName="funcionario" constraintName="fkloguf8wqhjyb6mn7kr9n4xic5" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_cor_pele" referencedTableName="cor_pele"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-164" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_uf" baseTableName="terceiro" constraintName="fkmsp2il6stfcndma03ckq50ihs" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_uf" referencedTableName="uf"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-165" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_telefone_secundario" baseTableName="empresa" constraintName="fkmwg7rweok0po7t13pmnpqd6v4" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_telefone" referencedTableName="telefone"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-166" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_terceiro" baseTableName="funcionario" constraintName="fknbra4xdh07dijy9p6r712dg7q" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_terceiro" referencedTableName="terceiro"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-167" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_funcionario_diretor" baseTableName="diretoria" constraintName="fknm08wxydfpmoj1obj7jj6joxx" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_funcionario" referencedTableName="funcionario"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-168" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_divisao" baseTableName="historico_funcionario" constraintName="fkoeidevjgxjsl6jy3nbyohba0s" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_divisao" referencedTableName="divisao"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-169" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_coordenacao" baseTableName="funcionario" constraintName="fkqyjf8g27rf2iidis8rg2s1dyk" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_coordenacao" referencedTableName="coordenacao"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-170" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_telefone" baseTableName="orgao" constraintName="fkrl5vbdy4u0g8pg5ntgci0vetl" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_telefone" referencedTableName="telefone"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-171" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_diretoria" baseTableName="funcionario" constraintName="fkrpxrknfni24d32kx6ceagf77t" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_diretoria" referencedTableName="diretoria"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-172" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_servidor" baseTableName="funcionario" constraintName="fkrtkvv4rs9o2tfrddye7vrjbj3" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_servidor" referencedTableName="servidor"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-173" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_funcionario" baseTableName="historico_funcionario" constraintName="fksa97jka3bxoenbn88kg02kqu9" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_funcionario" referencedTableName="funcionario"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-174" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_funcionario" baseTableName="hobbie" constraintName="fksyrcuawxbs7drdcgesm0xy1xw" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_funcionario" referencedTableName="funcionario"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-175" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_funcionario" baseTableName="telefone_funcionario" constraintName="fkt6nc8oks8egnfv9lrdeoe0ot1" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_funcionario" referencedTableName="funcionario"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-176" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_funcionario" baseTableName="formacao" constraintName="fkt95eyxs0biiawtui0cedn9jh7" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_funcionario" referencedTableName="funcionario"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-177" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_predio" baseTableName="local_interno" constraintName="fktlop59kjytc958xqu7t5o3cr8" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_predio" referencedTableName="predio"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-178" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_categoria_funcionario" baseTableName="funcionario" constraintName="fktp5ulfxf63f89evxjn6rcvt60" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_categoria_funcionario" referencedTableName="categoria_funcionario"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-179" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_uf_nascimento" baseTableName="funcionario" constraintName="fktrt15n4yxqfgrn50pav9pgga6" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_uf" referencedTableName="uf"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480953042466-180" context="production">
+        <addForeignKeyConstraint baseColumnNames="id_telefone_ramal" baseTableName="local_interno" constraintName="fkyh52ktxpcemdnfxmefbs7q52" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id_telefone" referencedTableName="telefone"/>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480955073488-1" context="production">
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="1"/>
+            <column name="int_codigo_banco" valueNumeric="1"/>
+            <column name="dsc_banco" value="BANCO DO BRASIL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="2"/>
+            <column name="int_codigo_banco" valueNumeric="3"/>
+            <column name="dsc_banco" value="BANCO DA AMAZONIA S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="3"/>
+            <column name="int_codigo_banco" valueNumeric="4"/>
+            <column name="dsc_banco" value="BANCO DO NORDESTE DO BRASIL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="4"/>
+            <column name="int_codigo_banco" valueNumeric="19"/>
+            <column name="dsc_banco" value="BANCO AZTECA DO BRASIL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="5"/>
+            <column name="int_codigo_banco" valueNumeric="21"/>
+            <column name="dsc_banco" value="BANESTES S.A. BANCO DO ESTADO DO ESPIRITO SANTO"/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="6"/>
+            <column name="int_codigo_banco" valueNumeric="25"/>
+            <column name="dsc_banco" value="BANCO ALFA S.A"/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="7"/>
+            <column name="int_codigo_banco" valueNumeric="33"/>
+            <column name="dsc_banco" value="BANCO SANTANDER BANESPA S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="8"/>
+            <column name="int_codigo_banco" valueNumeric="37"/>
+            <column name="dsc_banco" value="BANCO DO ESTADO DO PARÁ S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="9"/>
+            <column name="int_codigo_banco" valueNumeric="40"/>
+            <column name="dsc_banco" value="BANCO CARGILL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="10"/>
+            <column name="int_codigo_banco" valueNumeric="41"/>
+            <column name="dsc_banco" value="BANCO DO ESTADO DO RIO GRANDE DO SUL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="11"/>
+            <column name="int_codigo_banco" valueNumeric="44"/>
+            <column name="dsc_banco" value="BANCO BVA S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="12"/>
+            <column name="int_codigo_banco" valueNumeric="45"/>
+            <column name="dsc_banco" value="BANCO OPPORTUNITY S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="13"/>
+            <column name="int_codigo_banco" valueNumeric="47"/>
+            <column name="dsc_banco" value="BANCO DO ESTADO DE SERGIPE S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="14"/>
+            <column name="int_codigo_banco" valueNumeric="62"/>
+            <column name="dsc_banco" value="HIPERCARD BANCO MÚLTIPLO S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="15"/>
+            <column name="int_codigo_banco" valueNumeric="63"/>
+            <column name="dsc_banco" value="BANCO IBI S.A. - BANCO MÚLTIPLO"/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="16"/>
+            <column name="int_codigo_banco" valueNumeric="65"/>
+            <column name="dsc_banco" value="BANCO LEMON S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="17"/>
+            <column name="int_codigo_banco" valueNumeric="66"/>
+            <column name="dsc_banco" value="BANCO MORGAN STANLEY S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="18"/>
+            <column name="int_codigo_banco" valueNumeric="69"/>
+            <column name="dsc_banco" value="BPN BRASIL BANCO MÚLTIPLO S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="19"/>
+            <column name="int_codigo_banco" valueNumeric="70"/>
+            <column name="dsc_banco" value="BRB - BANCO DE BRASILIA S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="20"/>
+            <column name="int_codigo_banco" valueNumeric="72"/>
+            <column name="dsc_banco" value="BANCO RURAL MAIS S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="21"/>
+            <column name="int_codigo_banco" valueNumeric="73"/>
+            <column name="dsc_banco" value="BB BANCO POPULAR DO BRASIL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="22"/>
+            <column name="int_codigo_banco" valueNumeric="74"/>
+            <column name="dsc_banco" value="BANCO J. SAFRA S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="23"/>
+            <column name="int_codigo_banco" valueNumeric="75"/>
+            <column name="dsc_banco" value="BANCO CR2 S/A"/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="24"/>
+            <column name="int_codigo_banco" valueNumeric="76"/>
+            <column name="dsc_banco" value="BANCO KDB DO BRASIL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="25"/>
+            <column name="int_codigo_banco" valueNumeric="77"/>
+            <column name="dsc_banco" value="BANCO INTERMEDIUM S/A"/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="26"/>
+            <column name="int_codigo_banco" valueNumeric="79"/>
+            <column name="dsc_banco" value="JBS BANCO S/A"/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="27"/>
+            <column name="int_codigo_banco" valueNumeric="81"/>
+            <column name="dsc_banco" value="CONCÓRDIA BANCO S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="28"/>
+            <column name="int_codigo_banco" valueNumeric="96"/>
+            <column name="dsc_banco" value="BANCO BM&amp;F DE SERVIÇOS DE LIQUIDAÇÃO E CUSTÓDIA S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="29"/>
+            <column name="int_codigo_banco" valueNumeric="104"/>
+            <column name="dsc_banco" value="CAIXA ECONOMICA FEDERAL"/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="30"/>
+            <column name="int_codigo_banco" valueNumeric="107"/>
+            <column name="dsc_banco" value="BANCO BBM S/A"/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="31"/>
+            <column name="int_codigo_banco" valueNumeric="151"/>
+            <column name="dsc_banco" value="BANCO NOSSA CAIXA S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="32"/>
+            <column name="int_codigo_banco" valueNumeric="208"/>
+            <column name="dsc_banco" value="BANCO UBS PACTUAL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="33"/>
+            <column name="int_codigo_banco" valueNumeric="212"/>
+            <column name="dsc_banco" value="BANCO MATONE S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="34"/>
+            <column name="int_codigo_banco" valueNumeric="213"/>
+            <column name="dsc_banco" value="BANCO ARBI S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="35"/>
+            <column name="int_codigo_banco" valueNumeric="214"/>
+            <column name="dsc_banco" value="BANCO DIBENS S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="36"/>
+            <column name="int_codigo_banco" valueNumeric="217"/>
+            <column name="dsc_banco" value="BANCO JOHN DEERE S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="37"/>
+            <column name="int_codigo_banco" valueNumeric="218"/>
+            <column name="dsc_banco" value="BANCO BONSUCESSO S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="38"/>
+            <column name="int_codigo_banco" valueNumeric="222"/>
+            <column name="dsc_banco" value="BANCO CALYON BRASIL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="39"/>
+            <column name="int_codigo_banco" valueNumeric="224"/>
+            <column name="dsc_banco" value="BANCO FIBRA S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="40"/>
+            <column name="int_codigo_banco" valueNumeric="225"/>
+            <column name="dsc_banco" value="BANCO BRASCAN S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="41"/>
+            <column name="int_codigo_banco" valueNumeric="229"/>
+            <column name="dsc_banco" value="BANCO CRUZEIRO DO SUL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="42"/>
+            <column name="int_codigo_banco" valueNumeric="230"/>
+            <column name="dsc_banco" value="UNICARD BANCO MÚLTIPLO S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="43"/>
+            <column name="int_codigo_banco" valueNumeric="233"/>
+            <column name="dsc_banco" value="BANCO GE CAPITAL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="44"/>
+            <column name="int_codigo_banco" valueNumeric="237"/>
+            <column name="dsc_banco" value="BANCO BRADESCO S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="45"/>
+            <column name="int_codigo_banco" valueNumeric="241"/>
+            <column name="dsc_banco" value="BANCO CLASSICO S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="46"/>
+            <column name="int_codigo_banco" valueNumeric="243"/>
+            <column name="dsc_banco" value="BANCO MÁXIMA S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="47"/>
+            <column name="int_codigo_banco" valueNumeric="246"/>
+            <column name="dsc_banco" value="BANCO ABC BRASIL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="48"/>
+            <column name="int_codigo_banco" valueNumeric="248"/>
+            <column name="dsc_banco" value="BANCO BOAVISTA INTERATLANTICO S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="49"/>
+            <column name="int_codigo_banco" valueNumeric="249"/>
+            <column name="dsc_banco" value="BANCO INVESTCRED UNIBANCO S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="50"/>
+            <column name="int_codigo_banco" valueNumeric="250"/>
+            <column name="dsc_banco" value="BANCO SCHAHIN S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="51"/>
+            <column name="int_codigo_banco" valueNumeric="254"/>
+            <column name="dsc_banco" value="PARANÁ BANCO S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="52"/>
+            <column name="int_codigo_banco" valueNumeric="263"/>
+            <column name="dsc_banco" value="BANCO CACIQUE S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="53"/>
+            <column name="int_codigo_banco" valueNumeric="265"/>
+            <column name="dsc_banco" value="BANCO FATOR S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="54"/>
+            <column name="int_codigo_banco" valueNumeric="266"/>
+            <column name="dsc_banco" value="BANCO CEDULA S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="55"/>
+            <column name="int_codigo_banco" valueNumeric="300"/>
+            <column name="dsc_banco" value="BANCO DE LA NACION ARGENTINA"/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="56"/>
+            <column name="int_codigo_banco" valueNumeric="318"/>
+            <column name="dsc_banco" value="BANCO BMG S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="57"/>
+            <column name="int_codigo_banco" valueNumeric="341"/>
+            <column name="dsc_banco" value="BANCO ITAÚ S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="58"/>
+            <column name="int_codigo_banco" valueNumeric="356"/>
+            <column name="dsc_banco" value="BANCO ABN AMRO REAL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="59"/>
+            <column name="int_codigo_banco" valueNumeric="366"/>
+            <column name="dsc_banco" value="BANCO SOCIETE GENERALE BRASIL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="60"/>
+            <column name="int_codigo_banco" valueNumeric="370"/>
+            <column name="dsc_banco" value="BANCO WESTLB DO BRASIL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="61"/>
+            <column name="int_codigo_banco" valueNumeric="376"/>
+            <column name="dsc_banco" value="BANCO J.P. MORGAN S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="62"/>
+            <column name="int_codigo_banco" valueNumeric="389"/>
+            <column name="dsc_banco" value="BANCO MERCANTIL DO BRASIL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="63"/>
+            <column name="int_codigo_banco" valueNumeric="394"/>
+            <column name="dsc_banco" value="BANCO FINASA BMC S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="64"/>
+            <column name="int_codigo_banco" valueNumeric="399"/>
+            <column name="dsc_banco" value="HSBC BANK BRASIL S.A. - BANCO MULTIPLO"/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="65"/>
+            <column name="int_codigo_banco" valueNumeric="409"/>
+            <column name="dsc_banco" value="UNIBANCO-UNIAO DE BANCOS BRASILEIROS S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="66"/>
+            <column name="int_codigo_banco" valueNumeric="412"/>
+            <column name="dsc_banco" value="BANCO CAPITAL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="67"/>
+            <column name="int_codigo_banco" valueNumeric="422"/>
+            <column name="dsc_banco" value="BANCO SAFRA S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="68"/>
+            <column name="int_codigo_banco" valueNumeric="453"/>
+            <column name="dsc_banco" value="BANCO RURAL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="69"/>
+            <column name="int_codigo_banco" valueNumeric="456"/>
+            <column name="dsc_banco" value="BANCO DE TOKYO-MITSUBISHI UFJ BRASIL S/A"/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="70"/>
+            <column name="int_codigo_banco" valueNumeric="464"/>
+            <column name="dsc_banco" value="BANCO SUMITOMO MITSUI BRASILEIRO S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="71"/>
+            <column name="int_codigo_banco" valueNumeric="477"/>
+            <column name="dsc_banco" value="CITIBANK N.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="72"/>
+            <column name="int_codigo_banco" valueNumeric="487"/>
+            <column name="dsc_banco" value="DEUTSCHE BANK S.A. - BANCO ALEMAO"/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="73"/>
+            <column name="int_codigo_banco" valueNumeric="488"/>
+            <column name="dsc_banco" value="JPMORGAN CHASE BANK, NATIONAL ASSOCIATION"/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="74"/>
+            <column name="int_codigo_banco" valueNumeric="492"/>
+            <column name="dsc_banco" value="ING BANK N.V."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="75"/>
+            <column name="int_codigo_banco" valueNumeric="494"/>
+            <column name="dsc_banco" value="BANCO DE LA REPUBLICA ORIENTAL DEL URUGUAY"/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="76"/>
+            <column name="int_codigo_banco" valueNumeric="495"/>
+            <column name="dsc_banco" value="BANCO DE LA PROVINCIA DE BUENOS AIRES"/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="77"/>
+            <column name="int_codigo_banco" valueNumeric="505"/>
+            <column name="dsc_banco" value="BANCO CREDIT SUISSE (BRASIL) S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="78"/>
+            <column name="int_codigo_banco" valueNumeric="600"/>
+            <column name="dsc_banco" value="BANCO LUSO BRASILEIRO S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="79"/>
+            <column name="int_codigo_banco" valueNumeric="604"/>
+            <column name="dsc_banco" value="BANCO INDUSTRIAL DO BRASIL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="80"/>
+            <column name="int_codigo_banco" valueNumeric="610"/>
+            <column name="dsc_banco" value="BANCO VR S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="81"/>
+            <column name="int_codigo_banco" valueNumeric="611"/>
+            <column name="dsc_banco" value="BANCO PAULISTA S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="82"/>
+            <column name="int_codigo_banco" valueNumeric="612"/>
+            <column name="dsc_banco" value="BANCO GUANABARA S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="83"/>
+            <column name="int_codigo_banco" valueNumeric="613"/>
+            <column name="dsc_banco" value="BANCO PECUNIA S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="84"/>
+            <column name="int_codigo_banco" valueNumeric="623"/>
+            <column name="dsc_banco" value="BANCO PANAMERICANO S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="85"/>
+            <column name="int_codigo_banco" valueNumeric="626"/>
+            <column name="dsc_banco" value="BANCO FICSA S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="86"/>
+            <column name="int_codigo_banco" valueNumeric="630"/>
+            <column name="dsc_banco" value="BANCO INTERCAP S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="87"/>
+            <column name="int_codigo_banco" valueNumeric="633"/>
+            <column name="dsc_banco" value="BANCO RENDIMENTO S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="88"/>
+            <column name="int_codigo_banco" valueNumeric="634"/>
+            <column name="dsc_banco" value="BANCO TRIANGULO S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="89"/>
+            <column name="int_codigo_banco" valueNumeric="637"/>
+            <column name="dsc_banco" value="BANCO SOFISA S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="90"/>
+            <column name="int_codigo_banco" valueNumeric="638"/>
+            <column name="dsc_banco" value="BANCO PROSPER S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="91"/>
+            <column name="int_codigo_banco" valueNumeric="643"/>
+            <column name="dsc_banco" value="BANCO PINE S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="92"/>
+            <column name="int_codigo_banco" valueNumeric="653"/>
+            <column name="dsc_banco" value="BANCO INDUSVAL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="93"/>
+            <column name="int_codigo_banco" valueNumeric="654"/>
+            <column name="dsc_banco" value="BANCO A.J. RENNER S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="94"/>
+            <column name="int_codigo_banco" valueNumeric="655"/>
+            <column name="dsc_banco" value="BANCO VOTORANTIM S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="95"/>
+            <column name="int_codigo_banco" valueNumeric="707"/>
+            <column name="dsc_banco" value="BANCO DAYCOVAL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="96"/>
+            <column name="int_codigo_banco" valueNumeric="719"/>
+            <column name="dsc_banco" value="BANIF - BANCO INTERNACIONAL DO FUNCHAL (BRASIL), S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="97"/>
+            <column name="int_codigo_banco" valueNumeric="721"/>
+            <column name="dsc_banco" value="BANCO CREDIBEL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="98"/>
+            <column name="int_codigo_banco" valueNumeric="734"/>
+            <column name="dsc_banco" value="BANCO GERDAU S.A"/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="99"/>
+            <column name="int_codigo_banco" valueNumeric="735"/>
+            <column name="dsc_banco" value="BANCO POTTENCIAL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="100"/>
+            <column name="int_codigo_banco" valueNumeric="738"/>
+            <column name="dsc_banco" value="BANCO MORADA S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="101"/>
+            <column name="int_codigo_banco" valueNumeric="739"/>
+            <column name="dsc_banco" value="BANCO BGN S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="102"/>
+            <column name="int_codigo_banco" valueNumeric="740"/>
+            <column name="dsc_banco" value="BANCO BARCLAYS S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="103"/>
+            <column name="int_codigo_banco" valueNumeric="741"/>
+            <column name="dsc_banco" value="BANCO RIBEIRAO PRETO S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="104"/>
+            <column name="int_codigo_banco" valueNumeric="743"/>
+            <column name="dsc_banco" value="BANCO EMBLEMA S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="105"/>
+            <column name="int_codigo_banco" valueNumeric="745"/>
+            <column name="dsc_banco" value="BANCO CITIBANK S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="106"/>
+            <column name="int_codigo_banco" valueNumeric="746"/>
+            <column name="dsc_banco" value="BANCO MODAL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="107"/>
+            <column name="int_codigo_banco" valueNumeric="747"/>
+            <column name="dsc_banco" value="BANCO RABOBANK INTERNATIONAL BRASIL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="108"/>
+            <column name="int_codigo_banco" valueNumeric="748"/>
+            <column name="dsc_banco" value="BANCO COOPERATIVO SICREDI S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="109"/>
+            <column name="int_codigo_banco" valueNumeric="749"/>
+            <column name="dsc_banco" value="BANCO SIMPLES S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="110"/>
+            <column name="int_codigo_banco" valueNumeric="751"/>
+            <column name="dsc_banco" value="DRESDNER BANK BRASIL S.A. BANCO MULTIPLO"/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="111"/>
+            <column name="int_codigo_banco" valueNumeric="752"/>
+            <column name="dsc_banco" value="BANCO BNP PARIBAS BRASIL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="112"/>
+            <column name="int_codigo_banco" valueNumeric="753"/>
+            <column name="dsc_banco" value="NBC BANK BRASIL S. A. - BANCO MÚLTIPLO"/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="113"/>
+            <column name="int_codigo_banco" valueNumeric="756"/>
+            <column name="dsc_banco" value="BANCO COOPERATIVO DO BRASIL S.A. - BANCOOB"/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="114"/>
+            <column name="int_codigo_banco" valueNumeric="757"/>
+            <column name="dsc_banco" value="BANCO KEB DO BRASIL S.A."/>
+        </insert>
+        <insert tableName="banco">
+            <column name="id_banco" valueNumeric="115"/>
+            <column name="int_codigo_banco" valueNumeric="0"/>
+            <column name="dsc_banco" value="Não informado"/>
+        </insert>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480955073488-2" context="production">
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="1"/>
+            <column name="dsc_cargo" value="Diretor"/>
+            <column name="dsc_obs" value="DAS 101.5"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="2"/>
+            <column name="dsc_cargo" value="Administrador de Rede"/>
+            <column name="dsc_obs" value="Administrador de Rede"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="3"/>
+            <column name="dsc_cargo" value="Estagiário"/>
+            <column name="dsc_obs" value="Estagiário"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="4"/>
+            <column name="dsc_cargo" value="Coordenador"/>
+            <column name="dsc_obs" value="DAS 101.3"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="6"/>
+            <column name="dsc_cargo" value="Administrador do Sistema"/>
+            <column name="dsc_obs" value="Administrador do Sistema"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="7"/>
+            <column name="dsc_cargo" value="Programador"/>
+            <column name="dsc_obs" value="Programador"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="8"/>
+            <column name="dsc_cargo" value="Analista de Sistema"/>
+            <column name="dsc_obs" value="Analista de Sistema"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="9"/>
+            <column name="dsc_cargo" value="Gerente de Projeto"/>
+            <column name="dsc_obs" value="Gerente de Projeto"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="10"/>
+            <column name="dsc_cargo" value="Chefe de Divisão"/>
+            <column name="dsc_obs" value="DAS 101.2"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="11"/>
+            <column name="dsc_cargo" value="Chefe de Serviço"/>
+            <column name="dsc_obs" value="DAS 101.1"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="12"/>
+            <column name="dsc_cargo" value="Assistente Administrativo"/>
+            <column name="dsc_obs" value="Assistente Administrativo"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="13"/>
+            <column name="dsc_cargo" value="Suporte Técnico"/>
+            <column name="dsc_obs" value="Técnico de Informática"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="14"/>
+            <column name="dsc_cargo" value="Assistente Técnico"/>
+            <column name="dsc_obs" value="DAS 102.1"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="15"/>
+            <column name="dsc_cargo" value="Assistente"/>
+            <column name="dsc_obs" value="DAS 102.2"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="16"/>
+            <column name="dsc_cargo" value="Assessor Técnico"/>
+            <column name="dsc_obs" value="DAS 102.3"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="17"/>
+            <column name="dsc_cargo" value="Chefe de Gabinete"/>
+            <column name="dsc_obs" value="DAS 101.4"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="18"/>
+            <column name="dsc_cargo" value="Auditor-Chefe"/>
+            <column name="dsc_obs" value="DAS 101.3"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="19"/>
+            <column name="dsc_cargo" value="Chefe de Assessoria"/>
+            <column name="dsc_obs" value="DAS 101.4"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="20"/>
+            <column name="dsc_cargo" value="Presidente"/>
+            <column name="dsc_obs" value="NE"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="24"/>
+            <column name="dsc_cargo" value="Procurador Chefe"/>
+            <column name="dsc_obs" value="DAS 101.4"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="25"/>
+            <column name="dsc_cargo" value="Função Gratificada"/>
+            <column name="dsc_obs" value="FG-1"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="26"/>
+            <column name="dsc_cargo" value="Sem Função"/>
+            <column name="dsc_obs" value="cedido"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="27"/>
+            <column name="dsc_cargo" value="Motorista Oficial"/>
+            <column name="dsc_obs"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="28"/>
+            <column name="dsc_cargo" value="Motorista"/>
+            <column name="dsc_obs"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="29"/>
+            <column name="dsc_cargo" value="Jornalista"/>
+            <column name="dsc_obs"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="30"/>
+            <column name="dsc_cargo" value="Copeira"/>
+            <column name="dsc_obs" value="Terceirizados"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="31"/>
+            <column name="dsc_cargo" value="Auxiliar de Serviços Gerais"/>
+            <column name="dsc_obs" value="Treceirizado"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="32"/>
+            <column name="dsc_cargo" value="Garçom"/>
+            <column name="dsc_obs" value="Terceirizado"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="33"/>
+            <column name="dsc_cargo" value="Gestor de Programas e Projetos"/>
+            <column name="dsc_obs" value="Gestor de Programas e Projetos"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="34"/>
+            <column name="dsc_cargo" value="Assistente em Ciência e Tecnologia"/>
+            <column name="dsc_obs" value="Assistente em Ciência e Tecnologia"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="35"/>
+            <column name="dsc_cargo" value="Tecnologista"/>
+            <column name="dsc_obs" value="Tecnologista"/>
+        </insert>
+        <insert tableName="cargo_funcionario">
+            <column name="id_cargo_funcionario" valueNumeric="36"/>
+            <column name="dsc_cargo" value="Analista em Ciência e Tecnologia"/>
+            <column name="dsc_obs" value="Analista em Ciência e Tecnologia"/>
+        </insert>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480955073488-3" context="production">
+        <insert tableName="categoria_funcionario">
+            <column name="id_categoria_funcionario" valueNumeric="1"/>
+            <column name="dsc_categoria_funcionario" value="Outros"/>
+        </insert>
+        <insert tableName="categoria_funcionario">
+            <column name="id_categoria_funcionario" valueNumeric="2"/>
+            <column name="dsc_categoria_funcionario" value="Convêniado"/>
+        </insert>
+        <insert tableName="categoria_funcionario">
+            <column name="id_categoria_funcionario" valueNumeric="3"/>
+            <column name="dsc_categoria_funcionario" value="Estagiário"/>
+        </insert>
+        <insert tableName="categoria_funcionario">
+            <column name="id_categoria_funcionario" valueNumeric="4"/>
+            <column name="dsc_categoria_funcionario" value="Terceirizado"/>
+        </insert>
+        <insert tableName="categoria_funcionario">
+            <column name="id_categoria_funcionario" valueNumeric="5"/>
+            <column name="dsc_categoria_funcionario" value="Servidor"/>
+        </insert>
+        <insert tableName="categoria_funcionario">
+            <column name="id_categoria_funcionario" valueNumeric="6"/>
+            <column name="dsc_categoria_funcionario" value="Sem vínculo"/>
+        </insert>
+        <insert tableName="categoria_funcionario">
+            <column name="id_categoria_funcionario" valueNumeric="7"/>
+            <column name="dsc_categoria_funcionario" value="Bolsista"/>
+        </insert>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480955073488-4" context="production">
+        <insert tableName="categoria_telefone">
+            <column name="id_categoria_telefone" valueNumeric="1"/>
+            <column name="dsc_categoria_telefone" value="TELEFONE CELULAR"/>
+        </insert>
+        <insert tableName="categoria_telefone">
+            <column name="id_categoria_telefone" valueNumeric="2"/>
+            <column name="dsc_categoria_telefone" value="TELEFONE RESIDENCIAL"/>
+        </insert>
+        <insert tableName="categoria_telefone">
+            <column name="id_categoria_telefone" valueNumeric="3"/>
+            <column name="dsc_categoria_telefone" value="FAX"/>
+        </insert>
+        <insert tableName="categoria_telefone">
+            <column name="id_categoria_telefone" valueNumeric="4"/>
+            <column name="dsc_categoria_telefone" value="RAMAL"/>
+        </insert>
+        <insert tableName="categoria_telefone">
+            <column name="id_categoria_telefone" valueNumeric="5"/>
+            <column name="dsc_categoria_telefone" value="COMERCIAL"/>
+        </insert>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480955073488-18" context="production">
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="1"/>
+            <column name="dsc_sigla" value="AC"/>
+            <column name="dsc_nome" value="ACRE"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="2"/>
+            <column name="dsc_sigla" value="AL"/>
+            <column name="dsc_nome" value="ALAGOAS"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="3"/>
+            <column name="dsc_sigla" value="AP"/>
+            <column name="dsc_nome" value="AMAPÁ"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="4"/>
+            <column name="dsc_sigla" value="AM"/>
+            <column name="dsc_nome" value="AMAZONAS"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="5"/>
+            <column name="dsc_sigla" value="BA"/>
+            <column name="dsc_nome" value="BAHIA"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="6"/>
+            <column name="dsc_sigla" value="CE"/>
+            <column name="dsc_nome" value="CEARÁ"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="7"/>
+            <column name="dsc_sigla" value="DF"/>
+            <column name="dsc_nome" value="DISTRITO FEDERAL"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="8"/>
+            <column name="dsc_sigla" value="ES"/>
+            <column name="dsc_nome" value="ESPIRITO SANTO"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="9"/>
+            <column name="dsc_sigla" value="GO"/>
+            <column name="dsc_nome" value="GOIÁS"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="10"/>
+            <column name="dsc_sigla" value="MA"/>
+            <column name="dsc_nome" value="MARANHÃO"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="11"/>
+            <column name="dsc_sigla" value="MT"/>
+            <column name="dsc_nome" value="MATO GROSSO"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="12"/>
+            <column name="dsc_sigla" value="MS"/>
+            <column name="dsc_nome" value="MATO GROSSO DO SUL"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="13"/>
+            <column name="dsc_sigla" value="MG"/>
+            <column name="dsc_nome" value="MINAS GERAIS"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="14"/>
+            <column name="dsc_sigla" value="PA"/>
+            <column name="dsc_nome" value="PARÁ"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="15"/>
+            <column name="dsc_sigla" value="PB"/>
+            <column name="dsc_nome" value="PARAIBA"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="16"/>
+            <column name="dsc_sigla" value="PR"/>
+            <column name="dsc_nome" value="PARANÁ"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="17"/>
+            <column name="dsc_sigla" value="PE"/>
+            <column name="dsc_nome" value="PERNAMBUCO"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="18"/>
+            <column name="dsc_sigla" value="PI"/>
+            <column name="dsc_nome" value="PIAUÍ"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="19"/>
+            <column name="dsc_sigla" value="RJ"/>
+            <column name="dsc_nome" value="RIO DE JANEIRO"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="20"/>
+            <column name="dsc_sigla" value="RN"/>
+            <column name="dsc_nome" value="RIO GRAND DO NORTE"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="21"/>
+            <column name="dsc_sigla" value="RS"/>
+            <column name="dsc_nome" value="RIO GRANDE DO SUL"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="22"/>
+            <column name="dsc_sigla" value="RO"/>
+            <column name="dsc_nome" value="RONDÔNIA"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="23"/>
+            <column name="dsc_sigla" value="RR"/>
+            <column name="dsc_nome" value="RORAIMA"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="24"/>
+            <column name="dsc_sigla" value="SC"/>
+            <column name="dsc_nome" value="SANTA CATARINA"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="25"/>
+            <column name="dsc_sigla" value="SP"/>
+            <column name="dsc_nome" value="SÃO PAULO"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="26"/>
+            <column name="dsc_sigla" value="SE"/>
+            <column name="dsc_nome" value="SERGIPE"/>
+        </insert>
+        <insert tableName="uf">
+            <column name="id_uf" valueNumeric="27"/>
+            <column name="dsc_sigla" value="TO"/>
+            <column name="dsc_nome" value="TOCANTIS"/>
+        </insert>
+    </changeSet>
+    
+    <changeSet author="kairala (generated)" id="1480955073488-9" context="production">
+        <insert tableName="diretoria">
+            <column name="id_diretoria" valueNumeric="1"/>
+            <column name="dsc_sigla" value="PRE"/>
+            <column name="dsc_email" value="presidencia@aeb.gov.br"/>
+            <column name="bol_extinto" valueBoolean="false"/>
+            <column name="dsc_nome" value="PRESIDÊNCIA"/>
+            <column name="dsc_obs" value="Presidência da AEB"/>
+            <column name="id_funcionario_diretor"/>
+        </insert>
+        <insert tableName="diretoria">
+            <column name="id_diretoria" valueNumeric="2"/>
+            <column name="dsc_sigla" value="GAB"/>
+            <column name="dsc_email" value="gab@aeb.gov.br"/>
+            <column name="bol_extinto" valueBoolean="false"/>
+            <column name="dsc_nome" value="GABINETE"/>
+            <column name="dsc_obs" value="Gabinete da Presidência"/>
+            <column name="id_funcionario_diretor"/>
+        </insert>
+        <insert tableName="diretoria">
+            <column name="id_diretoria" valueNumeric="3"/>
+            <column name="dsc_sigla" value="PF"/>
+            <column name="dsc_email" value="pf@aeb.gov.br"/>
+            <column name="bol_extinto" valueBoolean="false"/>
+            <column name="dsc_nome" value="PROCURADORIA FEDERAL"/>
+            <column name="dsc_obs" value="Procuradoria Federal"/>
+            <column name="id_funcionario_diretor"/>
+        </insert>
+        <insert tableName="diretoria">
+            <column name="id_diretoria" valueNumeric="4"/>
+            <column name="dsc_sigla" value="AI"/>
+            <column name="dsc_email" value="auditoria.aeb@aeb.gov.br"/>
+            <column name="bol_extinto" valueBoolean="false"/>
+            <column name="dsc_nome" value="AUDITORIA INTERNA"/>
+            <column name="dsc_obs"/>
+            <column name="id_funcionario_diretor"/>
+        </insert>
+        <insert tableName="diretoria">
+            <column name="id_diretoria" valueNumeric="5"/>
+            <column name="dsc_sigla" value="ACI"/>
+            <column name="dsc_email" value="aci@aeb.gov.br"/>
+            <column name="bol_extinto" valueBoolean="false"/>
+            <column name="dsc_nome" value="ACESSORIA DE COOPERAÇÃO INTERNACIONAL"/>
+            <column name="dsc_obs" value="Assessoria de Cooperação Internacional"/>
+            <column name="id_funcionario_diretor"/>
+        </insert>
+        <insert tableName="diretoria">
+            <column name="id_diretoria" valueNumeric="6"/>
+            <column name="dsc_sigla" value="DPOA"/>
+            <column name="dsc_email" value="dpoa@aeb.gov.br"/>
+            <column name="bol_extinto" valueBoolean="false"/>
+            <column name="dsc_nome" value="DIRETORIA DE PLANEJAMENTO, ORÇAMENTO E ADMINISTRAÇÃO"/>
+            <column name="dsc_obs"/>
+            <column name="id_funcionario_diretor"/>
+        </insert>
+        <insert tableName="diretoria">
+            <column name="id_diretoria" valueNumeric="7"/>
+            <column name="dsc_sigla" value="DPEI"/>
+            <column name="dsc_email" value="dpei@aeb.gov.br"/>
+            <column name="bol_extinto" valueBoolean="false"/>
+            <column name="dsc_nome" value="DIRETORIA DE POLÍTICA ESPACIAL E INVESTIMENTOS ESTRATÉGICOS"/>
+            <column name="dsc_obs"/>
+            <column name="id_funcionario_diretor"/>
+        </insert>
+        <insert tableName="diretoria">
+            <column name="id_diretoria" valueNumeric="8"/>
+            <column name="dsc_sigla" value="DSAD"/>
+            <column name="dsc_email" value="dsad@aeb.gov.br"/>
+            <column name="bol_extinto" valueBoolean="false"/>
+            <column name="dsc_nome" value="DIRETORIA DE SATELITES, APLICAÇÕES E DESENVOLVIMENTO"/>
+            <column name="dsc_obs"/>
+            <column name="id_funcionario_diretor"/>
+        </insert>
+        <insert tableName="diretoria">
+            <column name="id_diretoria" valueNumeric="9"/>
+            <column name="dsc_sigla" value="DTEL"/>
+            <column name="dsc_email" value="dtel@aeb.gov.br"/>
+            <column name="bol_extinto" valueBoolean="false"/>
+            <column name="dsc_nome" value="DIRETORIA DE TRANSPORTE ESPACIAL E LICENCIAMENTO"/>
+            <column name="dsc_obs"/>
+            <column name="id_funcionario_diretor"/>
+        </insert>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480955073488-6" context="production">
+        <insert tableName="coordenacao">
+            <column name="id_coordenacao" valueNumeric="1"/>
+            <column name="dsc_sigla" value="CCS"/>
+            <column name="dsc_nome" value="COORDENAÇÃO DE COMUNICAÇÃO SOCIAL"/>
+            <column name="id_funcionario_coordenador"/>
+            <column name="id_diretoria" valueNumeric="2"/>
+        </insert>
+        <insert tableName="coordenacao">
+            <column name="id_coordenacao" valueNumeric="2"/>
+            <column name="dsc_sigla" value="CPM"/>
+            <column name="dsc_nome" value="COORDENAÇÃO DE PLANEJAMENTO E MODERNIZAÇÃO"/>
+            <column name="id_funcionario_coordenador"/>
+            <column name="id_diretoria" valueNumeric="6"/>
+        </insert>
+        <insert tableName="coordenacao">
+            <column name="id_coordenacao" valueNumeric="3"/>
+            <column name="dsc_sigla" value="CRH"/>
+            <column name="dsc_nome" value="COORDENAÇÃO DE RECURSOS HUMANOS"/>
+            <column name="id_funcionario_coordenador"/>
+            <column name="id_diretoria" valueNumeric="6"/>
+        </insert>
+        <insert tableName="coordenacao">
+            <column name="id_coordenacao" valueNumeric="4"/>
+            <column name="dsc_sigla" value="CRL"/>
+            <column name="dsc_nome" value="COORDENAÇÃO DE RECURSOS LOGÍSTICOS"/>
+            <column name="id_funcionario_coordenador"/>
+            <column name="id_diretoria" valueNumeric="6"/>
+        </insert>
+        <insert tableName="coordenacao">
+            <column name="id_coordenacao" valueNumeric="5"/>
+            <column name="dsc_sigla" value="COF"/>
+            <column name="dsc_nome" value="COORDENAÇÃO ORÇAMENTÁRIA E FINANCEIRA"/>
+            <column name="id_funcionario_coordenador"/>
+            <column name="id_diretoria" valueNumeric="6"/>
+        </insert>
+        <insert tableName="coordenacao">
+            <column name="id_coordenacao" valueNumeric="6"/>
+            <column name="dsc_sigla" value="CIE"/>
+            <column name="dsc_nome" value="COORDENAÇÃO DE INVESTIMENTOS ESTRATÉGICOS"/>
+            <column name="id_funcionario_coordenador"/>
+            <column name="id_diretoria" valueNumeric="7"/>
+        </insert>
+        <insert tableName="coordenacao">
+            <column name="id_coordenacao" valueNumeric="7"/>
+            <column name="dsc_sigla" value="CPP"/>
+            <column name="dsc_nome" value="COORDENAÇÃO DE POLÍTICAS E PLANOS"/>
+            <column name="id_funcionario_coordenador"/>
+            <column name="id_diretoria" valueNumeric="7"/>
+        </insert>
+        <insert tableName="coordenacao">
+            <column name="id_coordenacao" valueNumeric="8"/>
+            <column name="dsc_sigla" value="CPA"/>
+            <column name="dsc_nome" value="COORDENAÇÃO DE PROGRAMAÇÃO E AVALIAÇÃO"/>
+            <column name="id_funcionario_coordenador"/>
+            <column name="id_diretoria" valueNumeric="7"/>
+        </insert>
+        <insert tableName="coordenacao">
+            <column name="id_coordenacao" valueNumeric="9"/>
+            <column name="dsc_sigla" value="CPDI"/>
+            <column name="dsc_nome" value="COORDENAÇÃO DE PESQUISA, DESENVOLVIMENTO E INOVAÇÃO"/>
+            <column name="id_funcionario_coordenador"/>
+            <column name="id_diretoria" valueNumeric="8"/>
+        </insert>
+        <insert tableName="coordenacao">
+            <column name="id_coordenacao" valueNumeric="10"/>
+            <column name="dsc_sigla" value="CSA"/>
+            <column name="dsc_nome" value="COORDENAÇÃO DE SATÉLITES E APLICAÇÕES"/>
+            <column name="id_funcionario_coordenador"/>
+            <column name="id_diretoria" valueNumeric="8"/>
+        </insert>
+        <insert tableName="coordenacao">
+            <column name="id_coordenacao" valueNumeric="11"/>
+            <column name="dsc_sigla" value="CCL"/>
+            <column name="dsc_nome" value="COORDENAÇÃO DE CENTROS DE LANÇAMENTO"/>
+            <column name="id_funcionario_coordenador"/>
+            <column name="id_diretoria" valueNumeric="9"/>
+        </insert>
+        <insert tableName="coordenacao">
+            <column name="id_coordenacao" valueNumeric="12"/>
+            <column name="dsc_sigla" value="CNL"/>
+            <column name="dsc_nome" value="COORDENAÇÃO DE NORMALIZAÇÃO E LICENCIAMENTO"/>
+            <column name="id_funcionario_coordenador"/>
+            <column name="id_diretoria" valueNumeric="9"/>
+        </insert>
+        <insert tableName="coordenacao">
+            <column name="id_coordenacao" valueNumeric="13"/>
+            <column name="dsc_sigla" value="CVL"/>
+            <column name="dsc_nome" value="COORDENAÇÃO DE VEICULOS LANÇADORES"/>
+            <column name="id_funcionario_coordenador"/>
+            <column name="id_diretoria" valueNumeric="9"/>
+        </insert>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480955073488-10" context="production">
+        <insert tableName="divisao">
+            <column name="id_divisao" valueNumeric="1"/>
+            <column name="dsc_sigla" value="EVENTOS"/>
+            <column name="dsc_nome" value="DIVISÃO DE EVENTOS"/>
+            <column name="id_coordenacao" valueNumeric="1"/>
+            <column name="id_funcionario_divisao"/>
+        </insert>
+        <insert tableName="divisao">
+            <column name="id_divisao" valueNumeric="2"/>
+            <column name="dsc_sigla" value="IMPRENSA"/>
+            <column name="dsc_nome" value="DIVISÃO DE IMPRENSA"/>
+            <column name="id_coordenacao" valueNumeric="1"/>
+            <column name="id_funcionario_divisao"/>
+        </insert>
+        <insert tableName="divisao">
+            <column name="id_divisao" valueNumeric="3"/>
+            <column name="dsc_sigla" value="CRIAÇÃO"/>
+            <column name="dsc_nome" value="DIVISÃO DE PROJETOS E CRIAÇÃO"/>
+            <column name="id_coordenacao" valueNumeric="1"/>
+            <column name="id_funcionario_divisao"/>
+        </insert>
+        <insert tableName="divisao">
+            <column name="id_divisao" valueNumeric="4"/>
+            <column name="dsc_sigla" value="DINF"/>
+            <column name="dsc_nome" value="DIVISÃO DE INFORMÁTICA"/>
+            <column name="id_coordenacao" valueNumeric="2"/>
+            <column name="id_funcionario_divisao"/>
+        </insert>
+        <insert tableName="divisao">
+            <column name="id_divisao" valueNumeric="5"/>
+            <column name="dsc_sigla" value="DPLAN"/>
+            <column name="dsc_nome" value="DIVISÃO DE PLANEJAMENTO"/>
+            <column name="id_coordenacao" valueNumeric="2"/>
+            <column name="id_funcionario_divisao"/>
+        </insert>
+        <insert tableName="divisao">
+            <column name="id_divisao" valueNumeric="6"/>
+            <column name="dsc_sigla" value="DCTD"/>
+            <column name="dsc_nome" value="DIVISÃO DE CAPACITAÇÃO, TREINAMENTO E DESENVOLVIMENTO"/>
+            <column name="id_coordenacao" valueNumeric="3"/>
+            <column name="id_funcionario_divisao"/>
+        </insert>
+        <insert tableName="divisao">
+            <column name="id_divisao" valueNumeric="7"/>
+            <column name="dsc_sigla" value="DIPES"/>
+            <column name="dsc_nome" value="DIVISÃO DE PESSOAL"/>
+            <column name="id_coordenacao" valueNumeric="3"/>
+            <column name="id_funcionario_divisao"/>
+        </insert>
+        <insert tableName="divisao">
+            <column name="id_divisao" valueNumeric="8"/>
+            <column name="dsc_sigla" value="DCSG"/>
+            <column name="dsc_nome" value="DIVISÃO DE COMPRAS E SERVIÇOS GERAIS"/>
+            <column name="id_coordenacao" valueNumeric="4"/>
+            <column name="id_funcionario_divisao"/>
+        </insert>
+        <insert tableName="divisao">
+            <column name="id_divisao" valueNumeric="9"/>
+            <column name="dsc_sigla" value="DICOP"/>
+            <column name="dsc_nome" value="DIVISÃO DE COMUNICAÇÃO E PROTOCOLO"/>
+            <column name="id_coordenacao" valueNumeric="4"/>
+            <column name="id_funcionario_divisao"/>
+        </insert>
+        <insert tableName="divisao">
+            <column name="id_divisao" valueNumeric="10"/>
+            <column name="dsc_sigla" value="DLC"/>
+            <column name="dsc_nome" value="DIVISÃO DE LICITAÇÕES E CONTRATOS"/>
+            <column name="id_coordenacao" valueNumeric="4"/>
+            <column name="id_funcionario_divisao"/>
+        </insert>
+        <insert tableName="divisao">
+            <column name="id_divisao" valueNumeric="11"/>
+            <column name="dsc_sigla" value="SECOV"/>
+            <column name="dsc_nome" value="SERVIÇO DE CONTROLE DE DIÁRIAS/PASSAGEM"/>
+            <column name="id_coordenacao" valueNumeric="4"/>
+            <column name="id_funcionario_divisao"/>
+        </insert>
+        <insert tableName="divisao">
+            <column name="id_divisao" valueNumeric="12"/>
+            <column name="dsc_sigla" value="DCONT"/>
+            <column name="dsc_nome" value="DIVISÃO DE CONTABILIDADE"/>
+            <column name="id_coordenacao" valueNumeric="5"/>
+            <column name="id_funcionario_divisao"/>
+        </insert>
+        <insert tableName="divisao">
+            <column name="id_divisao" valueNumeric="13"/>
+            <column name="dsc_sigla" value="DIFIN"/>
+            <column name="dsc_nome" value="DIVISÃO FINANCEIRA"/>
+            <column name="id_coordenacao" valueNumeric="5"/>
+            <column name="id_funcionario_divisao"/>
+        </insert>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480955073488-11" context="production">
+        <insert tableName="empresa_plano_de_saude">
+            <column name="id_empresa_plano_de_saude" valueNumeric="1"/>
+            <column name="dsc_nome" value="SIS"/>
+        </insert>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480955073488-13" context="production">
+        <insert tableName="estado_civil">
+            <column name="id_estado_civil" valueNumeric="1"/>
+            <column name="dsc_estado_civil" value="Solteiro"/>
+        </insert>
+        <insert tableName="estado_civil">
+            <column name="id_estado_civil" valueNumeric="2"/>
+            <column name="dsc_estado_civil" value="Casado"/>
+        </insert>
+        <insert tableName="estado_civil">
+            <column name="id_estado_civil" valueNumeric="3"/>
+            <column name="dsc_estado_civil" value="Viúvo"/>
+        </insert>
+        <insert tableName="estado_civil">
+            <column name="id_estado_civil" valueNumeric="4"/>
+            <column name="dsc_estado_civil" value="Separado judicialmente"/>
+        </insert>
+        <insert tableName="estado_civil">
+            <column name="id_estado_civil" valueNumeric="5"/>
+            <column name="dsc_estado_civil" value="Divorciado"/>
+        </insert>
+        <insert tableName="estado_civil">
+            <column name="id_estado_civil" valueNumeric="6"/>
+            <column name="dsc_estado_civil" value="Outros"/>
+        </insert>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480955073488-14" context="production">
+        <insert tableName="nivel_formacao">
+            <column name="id_nivel_formacao" valueNumeric="1"/>
+            <column name="dsc_nivel_formacao" value="Pós-Doutorado"/>
+        </insert>
+        <insert tableName="nivel_formacao">
+            <column name="id_nivel_formacao" valueNumeric="2"/>
+            <column name="dsc_nivel_formacao" value="Doutorado"/>
+        </insert>
+        <insert tableName="nivel_formacao">
+            <column name="id_nivel_formacao" valueNumeric="3"/>
+            <column name="dsc_nivel_formacao" value="Mestrado"/>
+        </insert>
+        <insert tableName="nivel_formacao">
+            <column name="id_nivel_formacao" valueNumeric="4"/>
+            <column name="dsc_nivel_formacao" value="Especialização"/>
+        </insert>
+        <insert tableName="nivel_formacao">
+            <column name="id_nivel_formacao" valueNumeric="5"/>
+            <column name="dsc_nivel_formacao" value="Ensino superior"/>
+        </insert>
+        <insert tableName="nivel_formacao">
+            <column name="id_nivel_formacao" valueNumeric="6"/>
+            <column name="dsc_nivel_formacao" value="Ensino médio"/>
+        </insert>
+        <insert tableName="nivel_formacao">
+            <column name="id_nivel_formacao" valueNumeric="7"/>
+            <column name="dsc_nivel_formacao" value="Ensino fundamental"/>
+        </insert>
+        <insert tableName="nivel_formacao">
+            <column name="id_nivel_formacao" valueNumeric="8"/>
+            <column name="dsc_nivel_formacao" value="Nenhum"/>
+        </insert>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480955073488-16" context="production">
+        <insert tableName="telefone">
+            <column name="id_telefone" valueNumeric="1"/>
+            <column name="dsc_codigo_pais" value="+55"/>
+            <column name="dsc_ddd" value="61"/>
+            <column name="dsc_numero" value="33333333"/>
+            <column name="id_categoria_telefone" valueNumeric="1"/>
+        </insert>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480955073488-17" context="production">
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="0"/>
+            <column name="txt_codigo" value="00.00"/>
+            <column name="txt_nome_tipo" value="Falta não justificada"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="1"/>
+            <column name="txt_codigo" value="01.02"/>
+            <column name="txt_nome_tipo" value="A disposição da Justiça Eleitoral"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="2"/>
+            <column name="txt_codigo" value="01.47"/>
+            <column name="txt_nome_tipo" value="Abono em horas"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="3"/>
+            <column name="txt_codigo" value="01.46"/>
+            <column name="txt_nome_tipo" value="Abono por esquecimento de Registro de Ponto"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="4"/>
+            <column name="txt_codigo" value="02.01"/>
+            <column name="txt_nome_tipo" value="Afastamento para acompanhar Cônjuge ou companheiro art. 84 Lei 8.112/90"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="5"/>
+            <column name="txt_codigo" value="01.03"/>
+            <column name="txt_nome_tipo" value="Afastamento para estudos ou missão no exterior Art.95 Lei 8.112/90"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="6"/>
+            <column name="txt_codigo" value="02.02"/>
+            <column name="txt_nome_tipo" value="Afastamento para exercício de mandato eletivo"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="7"/>
+            <column name="txt_codigo" value="02.06"/>
+            <column name="txt_nome_tipo" value="Afastamento para servir em organismo internacional Art. 96 Lei 8.112/90"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="8"/>
+            <column name="txt_codigo" value="01.07"/>
+            <column name="txt_nome_tipo" value="Afastamento preventivo Art. 147 Lei 8.112/90"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="9"/>
+            <column name="txt_codigo" value="02.07"/>
+            <column name="txt_nome_tipo" value="Afastamento sindicância (Suspensão)"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="10"/>
+            <column name="txt_codigo" value="01.08"/>
+            <column name="txt_nome_tipo" value="Alistamento como Eleitor Art 97, inciso III Lei 8.112/90"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="11"/>
+            <column name="txt_codigo" value="01.62"/>
+            <column name="txt_nome_tipo" value="Amamentação Art. 209 Lei 8112/90"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="12"/>
+            <column name="txt_codigo" value="01.48"/>
+            <column name="txt_nome_tipo" value="Atestado comparecimento (tratamento da própria saúde)"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="13"/>
+            <column name="txt_codigo" value="01.50"/>
+            <column name="txt_nome_tipo" value="Atestado de acompanhante (doença em pessoa da família)"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="14"/>
+            <column name="txt_codigo" value="01.10"/>
+            <column name="txt_nome_tipo" value="Atraso/Saída antecipada"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="15"/>
+            <column name="txt_codigo" value="01.04"/>
+            <column name="txt_nome_tipo" value="Ausência autorizada pela chefia imediata"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="16"/>
+            <column name="txt_codigo" value="09.03"/>
+            <column name="txt_nome_tipo" value="Ausência não justificada"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="17"/>
+            <column name="txt_codigo" value="01.11"/>
+            <column name="txt_nome_tipo" value="Ausência prevista Art.15 Lei 8.868/94"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="18"/>
+            <column name="txt_codigo" value="01.12"/>
+            <column name="txt_nome_tipo" value="Casamento Art.97, Inciso III, Alinia A, Lei 8.112/90"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="19"/>
+            <column name="txt_codigo" value="01.13"/>
+            <column name="txt_nome_tipo" value="Comparecimento a congresso, conferência ou similares (Reunião fora)"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="20"/>
+            <column name="txt_codigo" value="01.14"/>
+            <column name="txt_nome_tipo" value="Compensação"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="21"/>
+            <column name="txt_codigo" value="02.77"/>
+            <column name="txt_nome_tipo" value="Data de ingresso posterior ao dia 1º"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="22"/>
+            <column name="txt_codigo" value="03.01"/>
+            <column name="txt_nome_tipo" value="Data de ingresso posterior ao dia 1º"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="23"/>
+            <column name="txt_codigo" value="02.55"/>
+            <column name="txt_nome_tipo" value="Desligamento do estágio"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="24"/>
+            <column name="txt_codigo" value="01.25"/>
+            <column name="txt_nome_tipo" value="Dispensa por atividade eleitoral"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="25"/>
+            <column name="txt_codigo" value="01.18"/>
+            <column name="txt_nome_tipo" value="Disponibilidade "/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="26"/>
+            <column name="txt_codigo" value="01.19"/>
+            <column name="txt_nome_tipo" value="Doação voluntária de sangue Art.97, Inciso I, Lei 8.112/90"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="27"/>
+            <column name="txt_codigo" value="01.20"/>
+            <column name="txt_nome_tipo" value="Falecimento de pessoa da família Art 97, Inciso III, Alinia B, Lei 8.112/90"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="28"/>
+            <column name="txt_codigo" value="02.21"/>
+            <column name="txt_nome_tipo" value="Falta"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="29"/>
+            <column name="txt_codigo" value="02.17"/>
+            <column name="txt_nome_tipo" value="Falta por greve"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="30"/>
+            <column name="txt_codigo" value="01.22"/>
+            <column name="txt_nome_tipo" value="Férias"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="31"/>
+            <column name="txt_codigo" value="01.23"/>
+            <column name="txt_nome_tipo" value="Jurí"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="32"/>
+            <column name="txt_codigo" value="01.24"/>
+            <column name="txt_nome_tipo" value="Licença adoção ou guarda judicial Art. 210, Lei 8.112/90"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="33"/>
+            <column name="txt_codigo" value="02.00"/>
+            <column name="txt_nome_tipo" value="Licença concedida por junta médica"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="34"/>
+            <column name="txt_codigo" value="01.26"/>
+            <column name="txt_nome_tipo" value="Licença gestante Art. 207, Lei 8.112/90"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="35"/>
+            <column name="txt_codigo" value="01.27"/>
+            <column name="txt_nome_tipo" value="Licença para atividade política Art. 86, 8.112/90"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="36"/>
+            <column name="txt_codigo" value="01.63"/>
+            <column name="txt_nome_tipo" value="Licença para tratamento da própria saúde Art. 202 , Lei 8.112/90"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="37"/>
+            <column name="txt_codigo" value="01.30"/>
+            <column name="txt_nome_tipo" value="Licença paternidade Art. 208, Lei 8.112/90"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="38"/>
+            <column name="txt_codigo" value="01.32"/>
+            <column name="txt_nome_tipo" value="Licença por motivo de acidente em serviço ou doença profissional Art.211, Lei 8112/90"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="39"/>
+            <column name="txt_codigo" value="01.31"/>
+            <column name="txt_nome_tipo" value="Licença por motivo de doença em pessoa da família Art. 83, Parágrafo 2, Lei 8112/90"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="40"/>
+            <column name="txt_codigo" value="01.33"/>
+            <column name="txt_nome_tipo" value="Licença premio por assiduidade"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="41"/>
+            <column name="txt_codigo" value="01.35"/>
+            <column name="txt_nome_tipo" value="Participação em competição desportiva nacional ou no exterior Art. 102, Inciso X, Lei 8112/90"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="42"/>
+            <column name="txt_codigo" value="01.51"/>
+            <column name="txt_nome_tipo" value="Participação em processo disciplinar Art. 152, Parágrafo 1, Lei 8112/90"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="43"/>
+            <column name="txt_codigo" value="01.37"/>
+            <column name="txt_nome_tipo" value="Participação em programa de treinamento Art. 102, Inciso IV, Lei 8112/90"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="44"/>
+            <column name="txt_codigo" value="03.03"/>
+            <column name="txt_nome_tipo" value="Ponto facultativo"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="45"/>
+            <column name="txt_codigo" value="03.02"/>
+            <column name="txt_nome_tipo" value="Ponto em manutenção"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="46"/>
+            <column name="txt_codigo" value="01.42"/>
+            <column name="txt_nome_tipo" value="Serviço externo"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="47"/>
+            <column name="txt_codigo" value="01.43"/>
+            <column name="txt_nome_tipo" value="Serviço extraordinário"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="48"/>
+            <column name="txt_codigo" value="03.04"/>
+            <column name="txt_nome_tipo" value="Servidor cedido"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="49"/>
+            <column name="txt_codigo" value="01.77"/>
+            <column name="txt_nome_tipo" value="Servidor não cadastrado"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="50"/>
+            <column name="txt_codigo" value="09.01"/>
+            <column name="txt_nome_tipo" value="Sistema de frequência com defeito"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="51"/>
+            <column name="txt_codigo" value="09.02"/>
+            <column name="txt_nome_tipo" value="Sistema elétrico com defeito"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="52"/>
+            <column name="txt_codigo" value="01.61"/>
+            <column name="txt_nome_tipo" value="Substituição de cargo em comição, DAS 101.4, 101.5, 101.6"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="53"/>
+            <column name="txt_codigo" value="02.25"/>
+            <column name="txt_nome_tipo" value="Suspensão disciplinar Art. 130, Lei 8112/90"/>
+        </insert>
+        <insert tableName="tipo_saida">
+            <column name="id_tipo_saida" valueNumeric="54"/>
+            <column name="txt_codigo" value="01.44"/>
+            <column name="txt_nome_tipo" value="Viagem a serviço"/>
+        </insert>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480955073488-7" context="production">
+        <insert tableName="cor_pele">
+            <column name="id_cor_pele" valueNumeric="2"/>
+            <column name="dsc_cor_de_pele" value="PRETA"/>
+        </insert>
+        <insert tableName="cor_pele">
+            <column name="id_cor_pele" valueNumeric="3"/>
+            <column name="dsc_cor_de_pele" value="AMARELA"/>
+        </insert>
+        <insert tableName="cor_pele">
+            <column name="id_cor_pele" valueNumeric="4"/>
+            <column name="dsc_cor_de_pele" value="PARDA"/>
+        </insert>
+        <insert tableName="cor_pele">
+            <column name="id_cor_pele" valueNumeric="5"/>
+            <column name="dsc_cor_de_pele" value="INDIGENA"/>
+        </insert>
+        <insert tableName="cor_pele">
+            <column name="id_cor_pele" valueNumeric="1"/>
+            <column name="dsc_cor_de_pele" value="BRANCA"/>
+        </insert>
+    </changeSet>
+    
+</databaseChangeLog>
+    

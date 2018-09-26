@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet author="kairala" id="201612051550-1" context="production">
+        <insert tableName="endereco">
+            <column name="id_endereco" valueNumeric="3"/>
+            <column name="dsc_logradouro" value="SMPW QUADRA 16 CONJUNTO 3"/>
+            <column name="dsc_complemento" value="LOTE 8"/>
+            <column name="dsc_bairro" value="PARK WAY"/>
+            <column name="dsc_numero" value="CASA F"/>
+            <column name="dsc_cep" value="71741603"/>
+            <column name="id_cidade" valueNumeric="9021"/>
+        </insert>
+
+        <insert tableName="documento_eleitoral">
+            <column name="id_documento_eleitoral" valueNumeric="1"/>
+            <column name="dsc_secao_titulo_eleitor" value="123"/>
+            <column name="dsc_titulo_eleitor" value="123"/>
+            <column name="dsc_zona_titulo_eleitor" value="123"/>
+            <column name="id_uf" valueNumeric="7"/>
+        </insert>
+
+        <insert tableName="documento_militar">
+            <column name="id_documento_militar" valueNumeric="1"/>
+            <column name="dsc_categoria_reservista" value="123"/>
+            <column name="dsc_numero_reservista" value="123"/>
+            <column name="dsc_serie_reservista" value="123"/>
+            <column name="id_uf" valueNumeric="7"/>
+        </insert>
+
+        <insert tableName="rg">
+            <column name="id_rg" valueNumeric="1"/>
+            <column name="dsc_rg" value="2747799"/>
+            <column name="dsc_orgao_emissor" value="SSP"/>
+            <column name="dta_expedicao" value="2016-12-05 15:23:02.853991"/>
+            <column name="id_uf" valueNumeric="7"/>
+        </insert>
+
+        <insert tableName="dados_trabalhistas">
+            <column name="id_daods_trabalhistas" valueNumeric="1"/>
+            <column name="dta_primeiro_emprego" valueDate="2016-11-18 18:25:20.231"/>
+            <column name="dsc_pis_pasep" value="PisPasep"/>
+        </insert>
+
+        <insert tableName="filiacao">
+            <column name="id_filiacao" valueNumeric="1"/>
+            <column name="dsc_nome_pai" value="Kairala José Kairala Filho"/>
+            <column name="dsc_nome_mae" value="Andrea Lopes Ramires Kairala"/>
+        </insert>
+
+        <insert tableName="funcionario">
+            <column name="id_funcionario" valueNumeric="1"/>
+            <column name="bol_ativo" valueBoolean="true"/>
+            <column name="dta_nascimento" valueDate="2016-12-05 15:23:02.853991"/>
+            <column name="dsc_fator_rh" value="O+"/>
+            <column name="dsc_cpf" value="04640704143"/>
+            <column name="dsc_email" value="thiago.kairala@aeb.gov.br"/>
+            <column name="dta_entrada" valueDate="2016-12-05 15:23:02.853991"/>
+            <column name="dta_saida"/>
+            <column name="dsc_nome" value="Thiago Ramires Kairala"/>
+            <column name="dsc_login_rede" value="thiago.kairala"/>
+            <column name="dsc_naturalidade" value="BRASILEIRO"/>
+            <column name="int_matricula" valueNumeric="213123"/>
+            <column name="dta_cadastro" valueDate="2016-12-05 15:23:02.853991"/>
+            <column name="bol_termo_responsabilidade" valueBoolean="true"/>
+            <column name="bol_sexo" valueBoolean="true"/>
+            <column name="id_endereco" valueNumeric="3"/>
+            <column name="id_uf_nascimento" valueNumeric="7"/>
+            <column name="id_coordenacao" valueNumeric="2"/>
+            <column name="id_diretoria" valueNumeric="6"/>
+            <column name="id_divisao" valueNumeric="4"/>
+            <column name="id_documento_eleitoral" valueNumeric="1"/>
+            <column name="id_contato_emergencia"/>
+            <column name="id_categoria_funcionario" valueNumeric="5"/>
+            <column name="id_cargo_funcionario" valueNumeric="11"/>
+            <column name="id_filiacao" valueNumeric="1"/>
+            <column name="id_plano_saude"/>
+            <column name="id_ramal"/>
+            <column name="id_dados_trabalhistas" valueNumeric="1"/>
+            <column name="id_estado_civil" valueNumeric="1"/>
+            <column name="id_documento_militar" valueNumeric="1"/>
+            <column name="id_terceiro"/>
+            <column name="id_servidor"/>
+            <column name="id_rg" valueNumeric="1"/>
+            <column name="id_cor_pele" valueNumeric="1"/>
+            <column name="id_conjuge"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

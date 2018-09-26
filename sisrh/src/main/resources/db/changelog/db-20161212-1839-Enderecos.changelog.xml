@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	logicalFilePath="classpath:/db/changelog/liquibase-master-changeLog.xml"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet author="kairala (generated)" id="1480955073488-12" context="production">
+        <insert tableName="endereco">
+            <column name="id_endereco" valueNumeric="2"/>
+            <column name="dsc_logradouro" value="QUADRA 506 EDIFICIO POLIEDRO"/>
+            <column name="dsc_complemento"/>
+            <column name="dsc_bairro" value=""/>
+            <column name="dsc_numero" value="7"/>
+            <column name="dsc_cep" value="2500000"/>
+            <column name="id_cidade" valueNumeric="9021"/>
+        </insert>
+    </changeSet>
+    <changeSet author="kairala (generated)" id="1480955073488-15" context="production">
+        <insert tableName="orgao">
+            <column name="id_orgao" valueNumeric="1"/>
+            <column name="dsc_sigla" value="AEB"/>
+            <column name="dsc_codigo" value="123"/>
+            <column name="dsc_nome" value="Agência Espacial Brasileira"/>
+            <column name="dsc_url_site" value="www.aeb.gov.br"/>
+            <column name="id_endereco" valueNumeric="2"/>
+            <column name="id_cidade" valueNumeric="9021"/>
+            <column name="id_telefone_fax"/>
+            <column name="id_telefone" valueNumeric="1"/>
+            <column name="id_uf" valueNumeric="7"/>
+        </insert>
+    </changeSet>
+    
+</databaseChangeLog>

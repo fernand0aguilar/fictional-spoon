@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+	<changeSet author="gabrielgonzaga" id="201701181508" context="production">
+		<insert tableName="categoria_funcionario">
+		    <column name="id_categoria_funcionario" valueNumeric="8" />
+			<column name="dsc_categoria_funcionario" value="Requisitado" />
+		</insert>
+		<insert tableName="cor_pele">
+		    <column name="id_cor_pele" valueNumeric="6" />
+			<column name="dsc_cor_de_pele" value="Não Informado" />
+		</insert>
+	</changeSet>
+</databaseChangeLog>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+	<include file="db/changelog/db-initial.changelog.xml" />
+	<include file="db/changelog/db-20161212-1808-Cidades.changelog.xml" />
+	<include file="db/changelog/db-20161205-1550.changelog.xml" />
+	<include file="db/changelog/db-20161208-1140.changelog.xml" />
+	<include file="db/changelog/db-20161212-1839-Enderecos.changelog.xml" />
+	<include file="db/changelog/db-20161212-1936-BancoTesteInicial.changelog.xml" />
+	<include file="db/changelog/db-20170118-1508-AdicionaRequisitado.changelog.xml" />
+	<include file="db/changelog/db-20170130-1504-inserirSala_funcionario.changelog.xml"/>
+	<include file="db/changelog/db-20170217-1520-alteraNomeAssessoria.xml"/>
+	
+</databaseChangeLog>

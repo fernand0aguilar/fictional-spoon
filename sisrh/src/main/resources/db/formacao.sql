@@ -1,0 +1,1 @@
+INSERT INTO nivel_formacao (ID_NIVEL_FORMACAO, DSC_NIVEL_FORMACAO) VALUES (1,'Pós-Doutorado'), (2,'Doutorado'), (3,'Mestrado'), (4,'Especialização'), (5,'Ensino superior'), (6,'Ensino médio'), (7,'Ensino fundamental'), (8,'Nenhum');
